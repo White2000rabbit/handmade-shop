@@ -27,10 +27,11 @@ html, body {
 .vissualy-hidden {
 	display:none;
 }
+
 .button {
 	display: inline-block;
    padding: 0.75rem 1.25rem;
-   border-radius: 5rem;
+   border-radius: 5px;
    text-align: center;
 	position: relative;
 	overflow: hidden;
@@ -41,7 +42,6 @@ html, body {
    text-transform: uppercase;
 	
 	border: 1px solid $color-3;
-	border-radius: 33.33%;
 	background-color: $color-3;
 	color: $color-1;
 
@@ -53,7 +53,7 @@ html, body {
 		width: 100%;
 		height: 100%;
 		background-color: $color-3;
-		border-radius: 10rem;
+		border-radius: 5px;
 		z-index: -2;
 	}
 	&:before {
@@ -65,7 +65,7 @@ html, body {
 		height: 100%;
 		background-color: darken($color-3, 15%);
 		transition: all 0.3s;
-		border-radius: 10rem;
+		border-radius: 5px;
 		z-index: -1;
 	}
 	&:hover {
@@ -76,13 +76,10 @@ html, body {
 	}
 }
 
-
-
 img {
    display: block;
    object-fit: cover;
-   width: 100%;
-   height:100%;
+   
 }
 .header {
 	background-color:$color-1;
@@ -161,15 +158,19 @@ img {
 	}
 	&__link {
 		font-size:24px;
+		
 		&:hover {
-			border-bottom: 3px dashed $color-2;
+				border-bottom: 3px dashed $color-2;
+		}
 		}
 	}
-}
+	
+
 
 .section {
 	margin: 0 auto;
 	padding: 90px 50px 0px 50px;
+	width: 100%;
 
 		&__title {
          font-size: 2rem;
@@ -183,18 +184,17 @@ img {
 
 		&__gallery {
 			display: flex;
-			justify-content: space-around;
+			justify-content: center;
 			align-items: center;
-			gap: 30px;
+			gap: 40px;
 			flex-wrap: wrap;
 			padding-bottom: 60px;
 		}
 }
 
 .card-container {
-	display: flex;
-	flex-direction: column;
-	gap:10px;
+	width: 210px;
+	height: 380px;
 
 		&__link {
 			cursor: pointer;
@@ -208,62 +208,97 @@ img {
 	flex-direction: column;
 
 		&__carousel {
+			padding-bottom: 15px;
 		}
 
+		& img {
+			display: block;
+			width: 100%;
+			object-fit: cover;
+		}
 		&__desc {
+			letter-spacing: 1.8;
+			padding-bottom: 15px;
 		}
 
 		&__price {
-		}
-
-		&__link {
+			letter-spacing: 1.8;
+			padding-bottom: 15px;
+			font-weight: 600;
 		}
 }
 .carousel {
+	
 }
 .arrow-top {
 }
+
 .footer {
 	background-color:$color-1;
-	display: grid;
-	grid-template-columns: 40% 50% 10%;
-	height:150px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	min-height: auto;
+	padding: 35px 10px 20px 10px;
 
-		&__nav {
-			display: flex;
-			flex-direction: column;
-			gap:15px;
-			align-items:start;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		align-items:start;
+	}
 
-		}
+	&__social {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+	}
 
-		&__link {
-		}
+	&__legal {
+	}
+
+	&__link {
+		position: relative;
+		width: 80px;
+		height: 50px;
+		margin: 20px;
+	}
 }
-.navigation__list {
-		
+
+
+.footer-nav {
+
+	&__list {
+		font-size: 1rem;
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
 }
 .social {
 
-		&__list {
-		}
+	&__item {
+	}
 
-		&__item {
-		}
+	&__link {
+	}
 
-		&__link {
-		}
-
-		&__icon {
-		}
+	&__icon {
+	}
 }
 .legal {
 
-		&__info {
-		}
+	&__info {
+	}
 }
 .legal-info {
 
-		&__link {
-		}
+	&__link {
+	}
 }
