@@ -200,6 +200,9 @@ img {
   flex-wrap: wrap;
   padding-bottom: 60px;
 }
+.section__button {
+  margin: 0px 40% 0px 40%;
+}
 
 .card-container {
   width: 210px;
@@ -262,6 +265,40 @@ img {
   width: 80px;
   height: 50px;
   margin: 20px;
+}
+.footer__link:before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  padding-right: 5px;
+  width: 7px;
+  height: 11px;
+  border-top: 5px solid #554333;
+  border-right: 5px solid #554333;
+  transform: rotate(-45deg);
+}
+.footer__link:after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 20px;
+  padding-right: 5px;
+  width: 7px;
+  height: 11px;
+  border-top: 5px solid #554333;
+  opacity: 0.5;
+  border-right: 5px solid #554333;
+  transform: rotate(-45deg);
+  animation: top 1s ease-in infinite;
+}
+@keyframes top {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 5px;
+  }
 }
 
 .footer-nav__list {

@@ -45,6 +45,8 @@ html, body {
 	background-color: $color-3;
 	color: $color-1;
 
+	
+
 	&:after {
 		content: '';
 		position: absolute;
@@ -190,6 +192,9 @@ img {
 			flex-wrap: wrap;
 			padding-bottom: 60px;
 		}
+		&__button {
+			margin: 0px 40% 0px 40%;
+		}
 }
 
 .card-container {
@@ -227,10 +232,12 @@ img {
 			font-weight: 600;
 		}
 }
+
 .carousel {
 	
 }
 .arrow-top {
+	
 }
 
 .footer {
@@ -266,6 +273,44 @@ img {
 		height: 50px;
 		margin: 20px;
 	}
+	&__link:before {
+		content:'';
+		position: absolute;
+		left: -30px;
+		top: 5px;
+		padding-right:5px;
+
+		width: 7px;
+		height: 11px;
+		border-top: 5px solid $color-2;
+		border-right: 5px solid $color-2;
+		transform: rotate(-45deg);
+	}
+	&__link:after {
+		content:'';
+		position: absolute;
+		left: -30px;
+		top: 20px;
+		padding-right:5px;
+
+		width: 7px;
+		height: 11px;
+		border-top: 5px solid $color-2;
+		opacity: 0.5;
+		border-right: 5px solid $color-2;
+		transform: rotate(-45deg);
+		animation: top 1s ease-in infinite;
+	}
+	@keyframes top {
+		from {
+			top: 20px;
+		}
+		to {
+			top: 5px;
+		}
+		
+	}
+
 }
 
 
