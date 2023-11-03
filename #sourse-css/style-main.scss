@@ -17,7 +17,6 @@ html, body {
    scroll-behavior: smooth;
 }
 @media (min-width:2100px) {body {font-size: 20px;}}
-
 .wrapper {
    min-height: 100%; 
    width:100%; 
@@ -253,6 +252,10 @@ img {
 		display: flex;
 		justify-content: space-between;
 	}
+	&__column:not(:last-child) {
+		width: 25%;
+		padding-right:40px;
+	}
 	&__nav {
 		display: flex;
 		flex-direction: column;
@@ -262,7 +265,7 @@ img {
 	&__social {
 		display: flex;
 		gap: 10px;
-		justify-content: center;
+		justify-content: flex-start;
 	}
 
 	&__legal {
@@ -311,28 +314,28 @@ img {
 		}
 		
 	}
-
 }
-
+.footer-link:hover {
+		font-weight: 600;
+	}
 
 .footer-nav {
 
 	&__list {
 		font-size: 1rem;
 	}
-
-	&__item {
+	&__link:hover {
+		font-weight: 600;
+		border-bottom: 1px dashed $color-2 opacity(0.5);
 	}
-
-	&__link {
-	}
+	
 }
 .social {
-
 	&__item {
 	}
 
-	&__link {
+	&__link:hover {
+		transform: scale(2);
 	}
 
 	&__icon {
@@ -345,6 +348,5 @@ img {
 }
 .legal-info {
 
-	&__link {
-	}
+	
 }
