@@ -197,6 +197,80 @@ img {
   border-bottom: 3px dashed #554333;
 }
 
+.section {
+  margin: 0 auto;
+  padding: 90px 50px 0px 50px;
+  width: 100%;
+}
+.section__title {
+  font-size: 2rem;
+  padding: 20px;
+}
+.section__description {
+  font-size: 1rem;
+  padding: 15px;
+}
+.section__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+.section__button {
+  margin: 0px 40% 0px 40%;
+}
+
+.card-container {
+  width: 210px;
+  height: 380px;
+}
+.card-container__link {
+  cursor: pointer;
+}
+.card-container__link:hover {
+  -webkit-box-shadow: 0px 0px 10px #554333;
+          box-shadow: 0px 0px 10px #554333;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card__carousel {
+  padding-bottom: 15px;
+}
+.card img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__desc {
+  letter-spacing: 1.8;
+  padding-bottom: 25px;
+}
+.card__price {
+  letter-spacing: 1.8;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+
 .footer {
   background-color: #E4E7D4;
   display: -webkit-box;
@@ -217,15 +291,9 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-}
-.footer__column {
-  width: 33.33%;
-}
-.footer__column:last-child {
-  text-align: end;
 }
 .footer__column:not(:last-child) {
+  width: 25%;
   padding-right: 40px;
 }
 .footer__nav {
@@ -245,9 +313,9 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .footer__link {
   position: relative;
