@@ -135,7 +135,7 @@ img {
   margin: 25px 15px 25px 0;
 }
 .navigation__burger span {
-  top: 50%;
+  top: 45%;
   scale: 1;
 }
 .navigation__burger span, .navigation__burger::after, .navigation__burger::before {
@@ -328,7 +328,7 @@ img {
 }
 .section__description {
   font-size: 1rem;
-  padding: 15px;
+  padding: 25px;
 }
 .section__gallery {
   display: -webkit-box;
@@ -355,6 +355,7 @@ img {
 }
 .card-container__link {
   cursor: pointer;
+  padding: 20px;
 }
 .card-container__link:hover {
   -webkit-box-shadow: 0px 0px 10px #554333;
