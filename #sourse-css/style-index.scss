@@ -14,7 +14,7 @@
 
 		&__description {
 			font-size: 1rem;
-			padding: 15px;
+			padding: 27px;
 		}
 
 		&__gallery {
@@ -36,6 +36,7 @@
 
 		&__link {
 			cursor: pointer;
+			padding: 20px;
 		}
 		&__link:hover {
 			box-shadow: 0px 0px 10px $color-2;
@@ -45,7 +46,6 @@
 .card {
 	display: flex;
 	flex-direction: column;
-
 		&__carousel {
 			padding-bottom: 15px;
 		}
