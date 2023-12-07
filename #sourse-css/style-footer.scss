@@ -8,7 +8,7 @@
 
 	&__row {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
       width:100%;
 	}
 	&__column {
@@ -34,51 +34,8 @@
 
 	&__legal {
 	}
-
-	&__link {
-		position: relative;
-		width: 80px;
-		height: 50px;
-		margin: 20px;
-	}
-	&__link:before {
-		content:'';
-		position: absolute;
-		left: -30px;
-		top: 5px;
-		padding-right:5px;
-
-		width: 7px;
-		height: 11px;
-		border-top: 5px solid $color-2;
-		border-right: 5px solid $color-2;
-		transform: rotate(-45deg);
-	}
-	&__link:after {
-		content:'';
-		position: absolute;
-		left: -30px;
-		top: 20px;
-		padding-right:5px;
-
-		width: 7px;
-		height: 11px;
-		border-top: 5px solid $color-2;
-		opacity: 0.5;
-		border-right: 5px solid $color-2;
-		transform: rotate(-45deg);
-		animation: top 1s ease-in infinite;
-	}
-	@keyframes top {
-		from {
-			top: 20px;
-		}
-		to {
-			top: 5px;
-		}
-		
-	}
 }
+
 .footer-link:hover {
 		font-weight: 600;
 	}
@@ -96,6 +53,9 @@
 }
 .social {
 	&__item {
+		display: inline-block;
+		width: 40px;
+		font-size: 32px;
 	}
 
 	&__link:hover {

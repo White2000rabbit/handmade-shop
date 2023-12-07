@@ -18,31 +18,6 @@
       height: 18px;
 		cursor: pointer;
 		margin: 25px 15px 25px 0;
-
-		span {
-			top:45%;
-			scale: 1;
-		}
-		span,
-		&::after,
-		&::before {
-			left:0;
-			width:100%;
-			height:10%;
-			position: absolute;
-			transition: all 0.3s ease 0;
-			background-color: #554333;
-		}
-		&::before,
-		&::after {
-			content:"";
-		}
-		&::before {
-			top:0;
-		}
-		&::after {
-			bottom: 0;
-		}
 	}
 	&__list--main {
 		position: absolute;

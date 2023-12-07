@@ -4,13 +4,14 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="css/style-index.css"/>
+      <script src="https://kit.fontawesome.com/86b37f988d.js" crossorigin="anonymous"></script>
       <title>EFIR_HANDMADE</title>
    </head>
    <body>
       <main class='wrapper'>
          <!-- @include "../blocks/header.html" -->
          <h1 class="vissualy-hidden">Авторские украшения для дома и бижутерия</h1>
-         <section class="section _section">
+         <section class="section _section" id="section">
             <h2 class="section__title">Коллекция из леса и моря</h2>
             <p class="section__description">Картины и панно выполнены в смешанной технике (эпоксидная смола, искусственный камень, стабиоизированный мох и пр.). Каждая картина выполнена в единственном экземпляре, возможен повтор по индивидуальному заказу, если изделия нет в наличии</p>
             <div class="section__gallery">
@@ -54,32 +55,22 @@
                      <p class="card__price">1990 руб.</p>
                   </a>
                </div>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link">
-                  <div class="card__carousel carousel">
-                     <img class='carousel__img' src="img/card-5.jpeg" width="70" height="90">
-                     <img class='carousel__img' src="img/card-5-1.jpeg" width="70" height="90">
-                  </div>
-                  <p class="card__desc">Черный песок</p>
-                  <p class="card__price">5000 руб.</p>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link">
-                  <div class="card__carousel carousel">
-                     <img class='carousel__img'src="img/card-6.jpeg" width="70" height="90">
-                     <img class='carousel__img' src="img/card-6-1.jpeg" width="70" height="90">
-                  </div>
-                  <p class="card__desc">Черепаший остров</p>
-                  <p class="card__price">700 руб.</p>
-               </a>
+               <div class="card-container card">
+                  <a class="card-container__link">
+                     <div class="card__carousel carousel">
+                        <img class='carousel__img' src="img/card-5.jpeg" width="70" height="90">
+                        <img class='carousel__img' src="img/card-5-1.jpeg" width="70" height="90">
+                     </div>
+                     <p class="card__desc">Черный песок</p>
+                     <p class="card__price">5000 руб.</p>
+                  </a>
+               </div>
             </div>
             <a class="button section__button" href="catalog.html">Перейти в каталог</a>
          </section>
          <section class="section _section">
             <h2 class="section__title">Коллекция декора для дома</h2>
-            <p class="section__description">Порядуйте себя и своих близких милыми украшениями для дома.</p>
+            <p class="section__description">Порадуйте себя и своих близких милыми украшениями для дома.</p>
             <div class="section__gallery">
                <div class="card-container card">
                   <a class="card-container__link">
@@ -221,9 +212,7 @@
             </div>
             <a class="button section__button" href="catalog.html">Перейти в каталог</a>
          </section>
-         <div class="arrow-top">
-            <svg></svg>
-         </div>
+         <div class="arrow-top"><a  class="fa-solid fa-arrow-up" href="#section"></a></div>
          <!-- @include "../blocks/footer.html" --> 
       </main>
    </body>
