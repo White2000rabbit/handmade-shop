@@ -1,9 +1,30 @@
+._active {
+   animation: animation 0.9s;
+	width: 100%;
+   height: 100%;
+   background-color: $color-4;
+} 
+@keyframes animation {
+   from {
+		transform: translateX(-150%);
+		transform: translateY(-150%);
+      opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		transform: translateY(0px);
+      opacity: 1;
+	}
+
+}
+body._lock {
+   opacity: 1;
+}
 .header {
 	background-color:$color-1;
 	display: flex;
 	justify-content: space-between;
 	height:90px;
-
 }
 .logo {
 	margin: 25px 25px 50px 25px;

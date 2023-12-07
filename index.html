@@ -11,11 +11,11 @@
       <main class='wrapper'>
 <header class="header">
    <a class="logo fa-solid fa-house" href="index.html"></a>
-   <nav class="navigation">
+   <nav class="navigation header__menu">
       <div class="navigation__burger">
-         <a href="#" class="fa-solid fa-grip-lines"></a>
+         <a href="#" class="fa-solid fa-grip-lines menu__icon"></a>
       </div>
-      <ul class="navigation__list--main">
+      <ul class="navigation__list--main header__menu">
          <li class="navigation__item"><a class="navigation__link" href="pages/about.html">О нас</a></li>
          <li class="navigation__item"><a class="navigation__link" href="pages/catalog.html">Каталог</a></li>
          <li class="navigation__item"><a class="navigation__link" href="pages/customers.html">Покупателям</a></li>
@@ -30,8 +30,20 @@
                <div class="card-container card">
                   <a class="card-container__link">
                      <div class="card__carousel carousel">
-                        <img class='carousel__img' src="img/card-1.jpeg" width="70" height="90">
-                        <img class='carousel__img' src="img/card-1-1.jpeg" width="70" height="90">
+                        <input type="radio" name="point" id="slide_1" checked>
+                        <input type="radio" name="point" id="slide_2">
+                        <div class="slider">
+                           <div class="slides slide_1">
+                              <img class='carousel__img' src="img/card-1.jpeg" width="70" height="90">
+                           </div>
+                           <div class="slides slide_2">
+                              <img class='carousel__img' src="img/card-1-1.jpeg" width="70" height="90">
+                           </div>
+                        </div>
+                        <div class="controls">
+                           <label for="slide_1"></label>
+                           <label for="slide_2"></label>
+                        </div>
                      </div>
                      <p class="card__desc">Морская лагуна</p>
                      <p class="card__price">700 руб.</p>
@@ -257,5 +269,6 @@
 </footer>      
 
       </main>
+      <script src="js/js.js"></script>
    </body>
 </html>

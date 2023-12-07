@@ -152,6 +152,51 @@ img {
      object-fit: cover;
 }
 
+._active {
+  -webkit-animation: animation 0.9s;
+          animation: animation 0.9s;
+  width: 100%;
+  height: 100%;
+  background-color: #D6E0D5;
+}
+
+@-webkit-keyframes animation {
+  from {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animation {
+  from {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+body._lock {
+  opacity: 1;
+}
+
 .header {
   background-color: #E4E7D4;
   display: -webkit-box;
