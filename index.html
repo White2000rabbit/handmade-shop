@@ -28,66 +28,184 @@
             <p class="section__description">Картины и панно выполнены в смешанной технике (эпоксидная смола, искусственный камень, стабиоизированный мох и пр.). Каждая картина выполнена в единственном экземпляре, возможен повтор по индивидуальному заказу, если изделия нет в наличии</p>
             <div class="section__gallery">
                <div class="card-container card">
-                  <a class="card-container__link">
-                     <div class="card__carousel carousel">
-                        <input type="radio" name="point" id="slide_1" checked>
-                        <input type="radio" name="point" id="slide_2">
-                        <div class="slider">
-                           <div class="slides slide_1">
-                              <img class='carousel__img' src="img/card-1.jpeg" width="70" height="90">
-                           </div>
-                           <div class="slides slide_2">
-                              <img class='carousel__img' src="img/card-1-1.jpeg" width="70" height="90">
-                           </div>
-                        </div>
-                        <div class="controls">
-                           <label for="slide_1"></label>
-                           <label for="slide_2"></label>
-                        </div>
-                     </div>
+                  <a class="card-container__link" href="#openModal1">
+                     <img class='card__img' src="img/card-1-1.jpeg" width="90" height="90" alt="Морская лагуна">
                      <p class="card__desc">Морская лагуна</p>
                      <p class="card__price">700 руб.</p>
                   </a>
+                  <div id="openModal1" class="modal">
+                     <div class="modal__dialog">
+                        <div class="modal__body">
+                           <a href="#close" class="modal__close fa-regular fa-circle-xmark" title="close"></a>
+                           <div class="modal__container">
+                              <div class="modal carousel modal__column">
+                                 <input type="radio" name="card_1" id="slide1" checked>
+                                 <input type="radio" name="card_1" id="slide1_1">
+                              <div class="slider">
+                                 <div class="slides slide1">
+                                    <img class='carousel__img' src="img/card-1.jpeg" width="70" height="90" alt="Морская лагуна">
+                                 </div>
+                                 <div class="slides slide1_1">
+                                    <img class='modal__img' src="img/card-1-1.jpeg" width="70" height="90" alt="Морская лагуна">
+                                 </div>
+                              </div>
+                              <div class="controls">
+                                 <label for="slide1"></label>
+                                 <label for="slide1_1"></label>
+                              </div>
+                           </div>
+                           <div class="modal__column">
+                              <p class="card__desc">Морская лагуна</p>
+                              <p class="card__price">700 руб.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
                </div>
                <div class="card-container card">
-                  <a class="card-container__link">
-                     <div class="card__carousel carousel">
-                        <img class='carousel__img' src="img/card-2.jpeg" width="70" height="90">
-                        <img class='carousel__img' src="img/card-2-1.jpeg" width="70" height="90">
-                     </div>
+                  <a class="card-container__link" href="#openModa2">
+                     <img class='card__img' src="img/card-2-1.jpeg" width="90" height="90" alt="Шторм">
                      <p class="card__desc">Шторм</p>
                      <p class="card__price">700 руб.</p>
                   </a>
+                  <div id="openModal2" class="modal">
+                     <div class="modal__dialog">
+                        <div class="modal__body">
+                           <a href="#close" class="modal__close fa-regular fa-circle-xmark" title="close"></a>
+                           <div class="modal__container">
+                              <div class="modal carousel modal__column">
+                                 <input type="radio" name="card_2" id="slide2" checked>
+                                 <input type="radio" name="card_2" id="slide2_1">
+                              <div class="slider">
+                                 <div class="slides slide2">
+                                    <img class='carousel__img' src="img/card-2.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                                 <div class="slides slide2_1">
+                                    <img class='modal__img' src="img/card-2-1.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                              </div>
+                              <div class="controls">
+                                 <label for="slide2"></label>
+                                 <label for="slide2_1"></label>
+                              </div>
+                           </div>
+                           <div class="modal__column">
+                              <p class="card__desc">Морская лагуна</p>
+                              <p class="card__price">700 руб.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
                </div>
                <div class="card-container card">
-                  <a class="card-container__link">
-                     <div class="card__carousel carousel">
-                        <img class='carousel__img' src="img/card-3.jpeg" width="70" height="90">
-                        <img class='carousel__img' src="img/card-3-1.jpeg" width="70" height="90">
-                     </div>
+                  <a class="card-container__link" href="#openModa2">
+                     <img class='card__img' src="img/card-3.jpeg" width="90" height="90" alt="Райское наслаждение">
                      <p class="card__desc">Райское наслаждение</p>
                      <p class="card__price">1000 руб.</p>
                   </a>
+                  <div id="openModal2" class="modal">
+                     <div class="modal__dialog">
+                        <div class="modal__body">
+                           <a href="#close" class="modal__close fa-regular fa-circle-xmark" title="close"></a>
+                           <div class="modal__container">
+                              <div class="modal carousel modal__column">
+                                 <input type="radio" name="card_3" id="slide3" checked>
+                                 <input type="radio" name="card_3" id="slide3_1">
+                              <div class="slider">
+                                 <div class="slides slide3">
+                                    <img class='carousel__img' src="img/card-3.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                                 <div class="slides slide3_1">
+                                    <img class='modal__img' src="img/card-3-1.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                              </div>
+                              <div class="controls">
+                                 <label for="slide3"></label>
+                                 <label for="slide3_1"></label>
+                              </div>
+                           </div>
+                           <div class="modal__column">
+                              <p class="card__desc">Райское наслаждение</p>
+                              <p class="card__price">1000 руб.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
                </div>
                <div class="card-container card">
-                  <a class="card-container__link">
-                     <div class="card__carousel carousel">
-                        <img class='carousel__img' src="img/card-4.jpeg" width="70" height="90">
-                        <img class='carousel__img' src="img/card-4-1.jpeg" width="70" height="90">
-                     </div>
+                  <a class="card-container__link" href="#openModa2">
+                     <img class='card__img' src="img/card-4.jpeg" width="90" height="90" alt="Лес">
                      <p class="card__desc">Лес</p>
                      <p class="card__price">1990 руб.</p>
                   </a>
+                  <div id="openModal2" class="modal">
+                     <div class="modal__dialog">
+                        <div class="modal__body">
+                           <a href="#close" class="modal__close fa-regular fa-circle-xmark" title="close"></a>
+                           <div class="modal__container">
+                              <div class="modal carousel modal__column">
+                                 <input type="radio" name="card_4" id="slide4" checked>
+                                 <input type="radio" name="card_4" id="slide4_1">
+                              <div class="slider">
+                                 <div class="slides slide4">
+                                    <img class='carousel__img' src="img/card-4.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                                 <div class="slides slide4_1">
+                                    <img class='modal__img' src="img/card-4-1.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                              </div>
+                              <div class="controls">
+                                 <label for="slide4"></label>
+                                 <label for="slide4_1"></label>
+                              </div>
+                           </div>
+                           <div class="modal__column">
+                              <p class="card__desc">Лес</p>
+                              <p class="card__price">1990 руб.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
                </div>
                <div class="card-container card">
-                  <a class="card-container__link">
-                     <div class="card__carousel carousel">
-                        <img class='carousel__img' src="img/card-5.jpeg" width="70" height="90">
-                        <img class='carousel__img' src="img/card-5-1.jpeg" width="70" height="90">
-                     </div>
+                  <a class="card-container__link" href="#openModa2">
+                     <img class='card__img' src="img/card-5.jpeg" width="90" height="90" alt="Черный песок">
                      <p class="card__desc">Черный песок</p>
                      <p class="card__price">5000 руб.</p>
                   </a>
+                  <div id="openModal2" class="modal">
+                     <div class="modal__dialog">
+                        <div class="modal__body">
+                           <a href="#close" class="modal__close fa-regular fa-circle-xmark" title="close"></a>
+                           <div class="modal__container">
+                              <div class="modal carousel modal__column">
+                                 <input type="radio" name="card_5" id="slide5" checked>
+                                 <input type="radio" name="card_5" id="slide5_1">
+                              <div class="slider">
+                                 <div class="slides slide5">
+                                    <img class='carousel__img' src="img/card-5.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                                 <div class="slides slide5_1">
+                                    <img class='modal__img' src="img/card-5-1.jpeg" width="70" height="90" alt="Шторм">
+                                 </div>
+                              </div>
+                              <div class="controls">
+                                 <label for="slide5"></label>
+                                 <label for="slide5_1"></label>
+                              </div>
+                           </div>
+                           <div class="modal__column">
+                              <p class="card__desc">Черный песок</p>
+                              <p class="card__price">5000 руб.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
                </div>
             </div>
             <a class="button section__button" href="catalog.html">Перейти в каталог</a>
