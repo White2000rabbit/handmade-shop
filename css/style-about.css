@@ -189,7 +189,7 @@ img {
     opacity: 1;
   }
 }
-body._lock {
+._lock {
   opacity: 1;
 }
 

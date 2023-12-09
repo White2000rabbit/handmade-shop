@@ -25,10 +25,11 @@
 			row-gap: 0;
 			flex-wrap: wrap;
 			margin: 0 auto;
+			margin-bottom: 20px;
 
 		}
 		&__button {
-			margin: 60px 40% 0px 40%;
+			margin: 0px 40% 0px 40%;
 		}
 }
 
@@ -43,6 +44,7 @@
 		&__link:hover {
 			box-shadow: 0px 0px 10px $color-2;
 			transition: all 0.3s ease-in-out;
+
 		}
 }
 .card {
@@ -60,11 +62,14 @@
 			padding-bottom: 20px;
 			overflow: hidden;
 		}
-		
+
 		&__desc {
 			letter-spacing: 1.8;
 			padding: 10px 0;
-			height: 60px;
+			max-height: 64px;
+			text-overflow:  ellipsis;
+			overflow: hidden;
+ 			white-space: nowrap;
 			text-transform: uppercase;
 		}
 
@@ -78,11 +83,8 @@
 
 
 /* модальное окно*/
-.modal:target {
-	transform: translate(100%, 0);
-}
 .modal {
-	transform: translate(-100%, 0);
+	display: none;
 	position: absolute; 
 	top: 0;
 	left: 0;
@@ -93,9 +95,6 @@
 	background: rgba(0,0,0,0.5); 
 	z-index: 1050;
 
-	&__dialog {
-		
-	}
 
 	&__close {
 		font-size: 32px;
@@ -114,12 +113,12 @@
 		cursor: pointer;
 		opacity: 0.75;
 	}
-	
+
 	&__body {
+		margin-top: 30px 50px;
 		padding: 15px;
 		width: 800px;
 		height: 600px;
-		margin: 0 auto;
 		background-color:$color-4;
 		display: flex;
 		flex-direction: column;
@@ -136,8 +135,86 @@
 		margin: 0 auto;
 
 	&__carousel {
-			padding-bottom: 0;
+		padding-bottom: 0;
+		position:relative;
+		width: 210px;
+		height: 200px;
+
+		& > input {
+			display: none;
 		}
+		& .controls {
+			left: 150px;
+			top: 300px;
+			position: absolute;
+		}
+		& label {
+			cursor: pointer;
+			display: inline-block;
+			height: 8px;
+			margin: 0px 2px;
+			text-align: center;
+			position: relative;
+			width: 15px;
+			background-color: $color-3;
+			z-index: 100;
+		}
+		& label:hover, 
+		#slide1:checked ~ .controls label:nth-of-type(1),
+		#slide1_1:checked ~ .controls label:nth-of-type(2),
+		#slide2:checked ~ .controls label:nth-of-type(1),
+		#slide2_1:checked ~ .controls label:nth-of-type(2)
+		#slide3:checked ~ .controls label:nth-of-type(1),
+		#slide3_1:checked ~ .controls label:nth-of-type(2),
+		#slide4:checked ~ .controls label:nth-of-type(1),
+		#slide4_1:checked ~ .controls label:nth-of-type(2),
+		#slide5:checked ~ .controls label:nth-of-type(1),
+		#slide5_1:checked ~ .controls label:nth-of-type(2),
+		#slide6:checked ~ .controls label:nth-of-type(1),
+		#slide6_1:checked ~ .controls label:nth-of-type(2)  {
+			background-color: $color-2;
+			transition: background-color ease-in-out .5s;
+		}
+		& 
+		#slide1:checked ~ .slider > .slide1,
+		#slide1_1:checked ~ .slider > .slide1_1,
+		#slide2:checked ~ .slider > .slide2,
+		#slide2_1:checked ~ .slider > .slide2_1,
+		#slide3:checked ~ .slider > .slide3,
+		#slide3_1:checked ~  .slider > .slide3_1,
+		#slide4:checked ~  .slider > .slide4,
+		#slide4_1:checked ~  .slider > .slide4_1,
+		#slide5:checked ~  .slider > .slide5,
+		#slide5_1:checked ~  .slider > .slide5_1,
+		#slide6:checked ~  .slider > .slide6,
+		#slide6_1:checked ~  .slider > .slide6_1 {
+			opacity: 1;
+			z-index: 1;
+			transform: scale(1);
+		}
+		&__slider {
+			margin: 0 auto;
+			padding: 0;
+			box-sizing: border-box;
+			height: inherit;
+			width: 100%;
+			position: relative;
+			display: flex;
+			align-items:center;
+			justify-content: center;
+		}
+				
+		&__slides {
+			height: inherit;
+			width: inherit;
+			position: absolute;
+			width: inherit;
+			opacity: 0;
+			z-index: 0;
+			transition: all ease-in-out 0.5s, opacity ease-in-out .5s;
+		}
+		
+	}
 
 	&__img {
 			width: 300px;
@@ -167,82 +244,4 @@
 		}
 	}
 }
-.carousel {
-	position:relative;
-	width: 210px;
-	height: 200px;
-}
-.carousel > input {
-	display: none;
-}
-.carousel .controls {
-	left: 150px;
-	top: 300px;
-	position: absolute;
-}
-.carousel label {
-	cursor: pointer;
-	display: inline-block;
-	height: 8px;
-	margin: 0px 2px;
-	text-align: center;
-	position: relative;
-	width: 15px;
-	background-color: $color-3;
-	z-index: 100;
-}
-		
-.carousel label:hover, 
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide1_1:checked ~ .controls label:nth-of-type(2),
-#slide2:checked ~ .controls label:nth-of-type(1),
-#slide2_1:checked ~ .controls label:nth-of-type(2)
-#slide3:checked ~ .controls label:nth-of-type(1),
-#slide3_1:checked ~ .controls label:nth-of-type(2),
-#slide4:checked ~ .controls label:nth-of-type(1),
-#slide4_1:checked ~ .controls label:nth-of-type(2),
-#slide5:checked ~ .controls label:nth-of-type(1),
-#slide5_1:checked ~ .controls label:nth-of-type(2),
-#slide6:checked ~ .controls label:nth-of-type(1),
-#slide6_1:checked ~ .controls label:nth-of-type(2)  {
-	background-color: $color-2;
-	transition: background-color ease-in-out .5s;
-}
-#slide1:checked ~ .slider > .slide1,
-#slide1_1:checked ~ .slider > .slide1_1,
-#slide2:checked ~ .slider > .slide2,
-#slide2_1:checked ~ .slider > .slide2_1,
-#slide3:checked ~ .slider > .slide3,
-#slide3_1:checked ~  .slider > .slide3_1,
-#slide4:checked ~  .slider > .slide4,
-#slide4_1:checked ~  .slider > .slide4_1,
-#slide5:checked ~  .slider > .slide5,
-#slide5_1:checked ~  .slider > .slide5_1,
-#slide6:checked ~  .slider > .slide6,
-#slide6_1:checked ~  .slider > .slide6_1 {
-	opacity: 1;
-	z-index: 1;
-	transform: scale(1);
-}
 
-.slider {
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-	height: inherit;
-	width: 100%;
-	position: relative;
-	display: flex;
-	align-items:center;
-	justify-content: center;
-}
-		
-.slides {
-	height: inherit;
-	width: inherit;
-	position: absolute;
-	width: inherit;
-	opacity: 0;
-	z-index: 0;
-	transition: all ease-in-out 0.5s, opacity ease-in-out .5s;
-}
