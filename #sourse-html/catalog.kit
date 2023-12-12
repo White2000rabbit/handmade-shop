@@ -14,270 +14,284 @@
       <main class='wrapper'>
          <!-- @include "../blocks/header.html"-->
          <h1 class="vissualy-hidden">Авторские украшения для дома и бижутерия</h1>
-         <section class="catalog__nav  catalog-nav">
-            <ul class="catalog-nav__list list">
-               <li class="list__item"><a class="catalog__link" href="#">Для дома</a></li>
-               <li class="list__item"><a class="catalog__link" href="#">Елочные игрушки</a></li>
-               <li class="list__item"><a class="catalog__link" href="#">Украшения</a></li>
-               <li class="list__item"><a class="catalog__link" href="#">Интерьерные картины</a></li>
+         <section class="page__nav  page-nav">
+            <ul class="page-nav__list list">
+               <li class="list__item"><a class="page__link" href="#">Для дома</a></li>
+               <li class="list__item"><a class="page__link" href="#">Елочные игрушки</a></li>
+               <li class="list__item"><a class="page__link" href="#">Украшения</a></li>
+               <li class="list__item"><a class="page__link" href="#">Интерьерные картины</a></li>
             </ul>
          </section>
-         <section class="catalog__content">
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-1.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-1-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-1-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">Морская лагуна</p>
-                     <p class="card__price">700 руб.</p>
-                  </div>
-                  <a class="card__link" href="#">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-2.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-2-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-2-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">Шторм</p>
-                     <p class="card__price">700 руб.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-3.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-3-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-3-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">Райское наслаждение</p>
-                     <p class="card__price">1000 руб.</p>
-                  </div>
-                  <a class="card__link" href="#">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-4.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-4-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-4-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">Лес</p>
-                     <p class="card__price">1990 руб.</p>
-                  </div>
-                  <a class="card__link" href="#">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-5.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-5-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-5-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">Черный песок</p>
-                     <p class="card__price">5000 руб.</p>
-                  </div>
-                  <a class="card__link" href="#">Проверить наличие</a>
+         <div class="catalog">
+            <aside class="catalog__aside filter">
+               <div class="filter__row">
+                  <label for="number">Стоимость</label>
+                  <input type="range" id="number" name="number" min="500" max="10000">
                </div>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-6.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-6-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-6-1.jpeg" width="90" height="90" alt="Морская лагуна">
+               <div class="filter__row">
+                  <label for="category">Категория</label>
+                  <fieldset id="category">
+                     <input type="checkbox">Для дома</input>
+                     <input type="checkbox">Елочные игрушки</input>
+                     <input type="checkbox">Украшения</input>
+                     <input type="checkbox">Интерьерные картины</input>
+                  </fieldset>
+               </div>
+            </aside>
+            <section class="catalog__content">
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-1.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-1-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-1-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">Морская лагуна</p>
+                        <p class="card__price">700 руб.</p>
+                     </div>
+                     <a class="card__link" href="#">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-2.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-2-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-2-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">Шторм</p>
+                        <p class="card__price">700 руб.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-3.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-3-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-3-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">Райское наслаждение</p>
+                        <p class="card__price">1000 руб.</p>
+                     </div>
+                     <a class="card__link" href="#">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-4.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-4-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-4-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">Лес</p>
+                        <p class="card__price">1990 руб.</p>
+                     </div>
+                     <a class="card__link" href="#">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-5.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-5-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-5-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">Черный песок</p>
+                        <p class="card__price">5000 руб.</p>
+                     </div>
+                     <a class="card__link" href="#">Проверить наличие</a>
                   </div>
-                  <div class='card__desc'>
-                     <p class="card__title"></p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link" href="#">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-7.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-7-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-7-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link" href="#">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-8.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-8-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-8-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link" href="#" >Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-9.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-9-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-9-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-10.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-10-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-10-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-11.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-11-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-11-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-12.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-12-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-12-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-13.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-13-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-13-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-14.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-14-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-14-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-15.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-15-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-15-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-16.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-16-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-16-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-17.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-17-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-17-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-            <div class="card-container card">
-               <a class="card-container__link" href="#">
-                  <div class="carousel">
-                     <img class='card__img card__img--main' width="100" height="150" src="img/card-18.jpeg" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-18-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                     <img class='card__img' src="img/card-18-1.jpeg" width="90" height="90" alt="Морская лагуна">
-                  </div>
-                  <div class='card__desc'>
-                     <p class="card__title">...</p>
-                     <p class="card__price">1 000 р.</p>
-                  </div>
-                  <a class="card__link">Проверить наличие</a>
-               </a>
-            </div>
-
-
-         </section>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-6.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-6-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-6-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title"></p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link" href="#">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-7.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-7-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-7-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link" href="#">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-8.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-8-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-8-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link" href="#" >Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-9.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-9-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-9-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-10.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-10-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-10-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-11.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-11-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-11-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-12.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-12-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-12-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-13.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-13-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-13-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-14.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-14-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-14-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-15.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-15-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-15-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-16.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-16-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-16-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-17.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-17-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-17-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+               <div class="card-container card">
+                  <a class="card-container__link" href="#">
+                     <div class="carousel">
+                        <img class='card__img card__img--main' width="100" height="150" src="img/card-18.jpeg" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-18-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                        <img class='card__img' src="img/card-18-1.jpeg" width="90" height="90" alt="Морская лагуна">
+                     </div>
+                     <div class='card__desc'>
+                        <p class="card__title">...</p>
+                        <p class="card__price">1 000 р.</p>
+                     </div>
+                     <a class="card__link">Проверить наличие</a>
+                  </a>
+               </div>
+            </section>
          <!-- @include "../blocks/footer.html"-->
       </main>
    </body>
