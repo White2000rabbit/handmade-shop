@@ -405,7 +405,7 @@ img {
   width: -moz-max-content;
   width: max-content;
 }
-.catalog__aside .filter__range {
+.catalog .filter__range {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,7 +415,7 @@ img {
           flex-direction: column;
   gap: 10px;
 }
-.catalog__aside .filter__checkboxes-list label::before {
+.catalog .filter__checkboxes-list label::before {
   content: "";
   position: absolute;
   left: 0px;
@@ -427,7 +427,7 @@ img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.catalog__aside .filter__checkboxes-list label::after {
+.catalog .filter__checkboxes-list label::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -437,7 +437,7 @@ img {
   transition: all 0.3s ease-in-out;
   display: none;
 }
-.catalog__aside .filter__checkboxes-list label {
+.catalog .filter__checkboxes-list label {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,28 +457,28 @@ img {
       -ms-user-select: none;
           user-select: none;
 }
-.catalog__aside .filter__checkboxes-list input:checked + label::before {
-  background-color: #DD845A;
+.catalog .filter__checkboxes-list input:checked + label::before {
+  background-color: #E4E7D4;
   width: 24px;
   height: 24px;
   border-color: #E4E7D4;
 }
-.catalog__aside .filter__checkboxes-list input:checked + label::after {
+.catalog .filter__checkboxes-list input:checked + label::after {
   display: block;
 }
-.catalog__aside .filter__checkboxes-list input:checked:hover + label:before {
-  background-color: #DD845A;
+.catalog .filter__checkboxes-list input:checked:hover + label:before {
+  background-color: #E4E7D4;
   border-color: #E4E7D4;
   color: #DD845A;
 }
-.catalog__aside .filter__checkboxes-list input:checked:hover + label {
+.catalog .filter__checkboxes-list input:checked:hover + label {
   color: #DD845A;
 }
-.catalog__aside .filter__checkboxes-list input:hover + label {
+.catalog .filter__checkboxes-list input:hover + label {
   color: #DD845A;
 }
-.catalog__aside .filter__range input {
-  background-color: #554333;
+.catalog .filter__button {
+  background-color: #E4E7D4;
 }
 .catalog__content {
   width: 1280px;

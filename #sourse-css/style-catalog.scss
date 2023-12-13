@@ -60,13 +60,14 @@
 			text-align: left;
 			width: max-content;
 		}
-
-		& .filter__range {
+	}
+	.filter {
+		&__range {
 			display: flex;
 			flex-direction: column;
 			gap:10px;
 		}
-		& .filter__checkboxes-list label::before {
+		&__checkboxes-list label::before {
 			content: "";
 			position: absolute;
 			left: 0px;
@@ -77,7 +78,7 @@
 			border-radius: 4px;
 			transition: all 0.3s ease-in-out;
 		}
-		& .filter__checkboxes-list label::after {
+		&__checkboxes-list label::after {
 			content: "";
 			position: absolute;
 			left: 0px;
@@ -86,7 +87,7 @@
 			transition: all 0.3s ease-in-out;
 			display: none;
 		}
-		& .filter__checkboxes-list label {
+		&__checkboxes-list label {
 			position: relative;
 			display: flex;
 			align-items: center;	
@@ -100,30 +101,30 @@
 			user-select: none;
 		}
 
-		& .filter__checkboxes-list input:checked + label::before {
-			background-color: $color-3;
+		&__checkboxes-list input:checked + label::before {
+			background-color: $color-1;
 			width: 24px;
 			height: 24px;
 			border-color: $color-1;
 		}
 
-		& .filter__checkboxes-list input:checked + label::after {
+		&__checkboxes-list input:checked + label::after {
 			display: block;
 		}
-		& .filter__checkboxes-list input:checked:hover + label:before {
-			background-color: $color-3;
+		&__checkboxes-list input:checked:hover + label:before {
+			background-color: $color-1;
 			border-color: $color-1;
 			color: $color-3;
 		}
-		& .filter__checkboxes-list input:checked:hover + label {
+		&__checkboxes-list input:checked:hover + label {
 			color: $color-3;
 		}
-		& .filter__checkboxes-list input:hover + label {
+		&__checkboxes-list input:hover + label {
 			color: $color-3;
 		}
-		& .filter__range input {
-			
-			background-color: $color-2;
+
+		&__button {
+			background-color: $color-1
 		}
 	
 	}
