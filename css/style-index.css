@@ -46,6 +46,7 @@ html, body {
   width: 100%;
   padding: 0px 0px;
   margin: 0 auto;
+  position: relative;
 }
 
 .vissualy-hidden {
@@ -259,6 +260,9 @@ img {
 }
 
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: #E4E7D4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +274,7 @@ img {
   gap: 30px;
   min-height: auto;
   padding: 35px 10px 20px 10px;
+  width: 100%;
 }
 .footer__row {
   display: -webkit-box;

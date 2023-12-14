@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style-catalog.css"/>
+      <script src="https://kit.fontawesome.com/86b37f988d.js" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+      <title>EFIR_HANDMADE</title>
+   </head>
+   <body>
+      <main class='wrapper'> 
+      <header class="header">
+         <a class="logo fa-solid fa-house" href="index.html"></a>
+         <nav class="navigation header__menu">
+            <div class="navigation__burger">
+               <a href="#" class="fa-solid fa-grip-lines menu__icon"></a>
+            </div>
+            <ul class="navigation__list--main header__menu">
+               <li class="navigation__item"><a class="navigation__link" href="pages/about.html">О нас</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="pages/catalog.html">Каталог</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="pages/customers.html">Покупателям</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="#">Заказать</a></li>
+            </ul> 
+         </nav>         
+      </header> 
+            
+      <h1 class="vissualy-hidden">Авторские украшения для дома и бижутерия</h1>
+      <div class="'page">
+         <section class="page__nav  page-nav">
+               <ul class="page-nav__list list">
+                  <li class="list__item"><a class="page__link" href="#">Для дома</a></li>
+                  <li class="list__item"><a class="page__link" href="#">Елочные игрушки</a></li>
+                  <li class="list__item"><a class="page__link" href="#">Украшения</a></li>
+                  <li class="list__item"><a class="page__link" href="#">Интерьерные картины</a></li>
+               </ul>
+         </section>
+         <div class="catalog">
+            <aside class="catalog__aside filter">
+                     <fieldset class="filter__type">
+                        <legend>Категория товара</legend>
+                        <ul class="filter__checkboxes-list">
+                           <li class="filter__checkboxes-item">
+                              <input class="visually-hidden" type="checkbox" name="home" value="home" id="home">
+                              <label for="home">Для дома</label>
+                           </li>
+                           <li class="filter__checkboxes-item">
+                              <input class="visually-hidden" type="checkbox" name="christmas" value="christmas" id="christmas">
+                              <label for="christmas">Елочные игрушки</label>
+                           </li>
+                           <li class="filter__checkboxes-item">
+                              <input class="visually-hidden" type="checkbox" name="accessories" value="accessories" id="accessories">
+                              <label for="accessories">Украшения</label>
+                           </li>
+                           <li class="filter__checkboxes-item">
+                           <input class="visually-hidden" type="checkbox" name="painting" value="painting" id="painting">
+                           <label for="painting">Интерьерные картины</label>
+                           </li>
+                        </ul>
+                     </fieldset>
+                     <div class="filter__range">
+                        <label for="range">Цена, ₽</label>
+                        <input type="text" id="sampleSlider" />
+                     </div>
+                     <button class="button filter__button" type="submit">Показать</button>
+            </aside>
+            <section class="catalog__content">
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-1.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">Морская лагуна</p>
+                           <p class="card__price">700 руб.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-2.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">Шторм</p>
+                           <p class="card__price">700 руб.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-3.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">Райское наслаждение</p>
+                           <p class="card__price">1000 руб.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-4.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">Лес</p>
+                           <p class="card__price">1990 руб.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-5.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">Черный песок</p>
+                           <p class="card__price">5000 руб.</p>
+                        </div>
+                  </div>
+                  
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-6.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title"></p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-7.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                        
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-8.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-9.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-10.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-11.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-12.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-13.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-14.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-15.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-16.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-17.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="card-container card">
+                     <a class="card-container__link" href="#">
+                        <div class="carousel">
+                           <img class='card__img card__img--main' width="100" height="150" src="img/card-18.jpeg" alt="Морская лагуна">
+                        </div>
+                        <div class="product__image-navigation hidden">
+                           <span class="product__navigation-item product__navigation-item--active"></span>
+                           <span class="product__navigation-item"></span>
+                        </div>
+                        <div class='card__desc'>
+                           <p class="card__title">...</p>
+                           <p class="card__price">1 000 р.</p>
+                        </div>
+                     </a>
+                  </div>
+            </section>
+         </div>
+      </div>
+      <section class="popup">
+         <div class="popup__inner">
+            <button class="popup__close" type="button" aria-label="Закрыть">
+             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 8L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L8 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292893 15.7071C-0.0976311 15.3166 -0.0976311 14.6834 0.292893 14.2929L6.58579 8L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z"/>
+             </svg>
+            </button>
+            <h3 class="popup__title">Черный песок</h3>
+            <div class="popup__price">5 000 ₽</div>
+            <div class="popup__columns">
+               <div class="popup__left">
+                  <div class="popup__gallery gallery">
+                     <button class="gallery__favourite fav-add">
+                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7C3 13 10 16.5 11 17C12 16.5 19 13 19 7C19 4.79086 17.2091 3 15 3C12 3 11 5 11 5C11 5 10 3 7 3C4.79086 3 3 4.79086 3 7Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                     </button>
+                  <div class="gallery__main-pic">
+                     <img src="img/card-5.jpeg"  width="520" height="340" alt="Черный песок">
+                  </div>
+                  <ul class="gallery__list">
+                     <li class="gallery__item gallery__item--active">
+                        <img src="img/card-5-1.jpeg" alt="Черный песок" width="124" height="80">
+                     </li>
+                     <li class="gallery__item">
+                        <img src="img/card-5-1.jpeg" alt="Черный песок" width="124" height="80">
+                     </li>
+               </div>
+         </div>
+      </section>
+      <footer class="footer">
+         <div class="footer__row">
+            <div class="footer__column">
+               <nav class="footer__nav footer-nav">
+                  <ul class="footer-nav__list">
+                     <li class="footer-nav__item"><a class="footer-nav__link link" href="#">О нас</a></li>
+                     <li class="footer-nav__item"><a class="footer-nav__link link" href="#">Каталог</a></li>
+                     <li class="footer-nav__item"><a class="footer-nav__link link" href="#">Покупателям</a></li>
+                     <li class="footer-nav__item"><a class="footer-nav__link link" href="#">Заказать</a></li>
+                  </ul> 
+               </nav>
+            </div>
+            <div class="footer__column">
+               <ul class="footer__social social">
+                  <li class='social__item'><a class="social__link fa-brands fa-twitter" href="https://twitter.com/?lang=ru"></a>
+                  </li>
+                  <li class='social__item'><a class="social__link link fa-brands fa-instagram" href="https://www.instagram.com/"></a>
+                  </li>
+                  <li class='social__item'><a class="social__link link fa-brands fa-facebook" href="https://www.facebook.com/?locale=ru_RU"></a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer__row">
+            <section class="footer__legal">
+               <p class="legal__info"><a class="legal-info__link footer-link" href="">Политика обработки персональных данных</a></p>
+               <p class="legal__info"><a class="legal-info__link footer-link" href="">Правила пользования сайтом</a></p>
+            </section>
+      </div>
+      </footer>    
+   </main>
+      <script src="js/js.js"></script>
+   </body>
+</html>
