@@ -1,63 +1,73 @@
-import {CategoryType} from 'const.js';
+const home = document.getElementById('home');
+const christmas = document.querySelectorAll("input[name=christmas]");
+const accessories = document.querySelectorAll("input[name=accessories]");
+const painting = document.querySelectorAll("input[name=painting]");
+const card = document.querySelectorAll(".card");
+const cardHome = document.querySelectorAll(".card[data-check=painting]"); 
+const cardPaintings = document.querySelectorAll(".card[data-check=painting]");
+const cardAccessories = document.querySelectorAll(".card[data-check=painting]");
+const cardChristmas = document.querySelectorAll(".card[data-check=painting]");
 
-const createRangeFilterTemplate = () => `<div></div>`;
-
-export class FilterAllView extends AbstractFilterView {
-   getTemplate() {
-      return createRangeFilterTemplate();
-   }
-}
-
-//фильтр категории
-export const getCategoryProducts = (products, category) => {
-   return products.filter((product) => product.category === category);
-};
- //фильтр по цене
-export const getProductsPriceRanges = (products) => {
-   const prices = products.map((product) => product.price);
-
-   return {
-      min: Math.min.apply(null, prices),
-      max: Math.max.apply(null, prices),
+   function isShow (type) {
+      for (let i = 0; i < card.length; i++) {
+         if (type.checked) {
+            if (card[i].getAttribute('data-check') === type) {
+               card[i].classList.add('card-show');
+               card[i].classList.remove('card-hidden');
+            } else {
+               card[i].classList.add('card-hidden');
+               card[i].classList.remove('card-show');
+            }
+         } else {
+            card[i].classList.add('card-show');
+            card[i].classList.remove('card-hidden');
+         }
+      }
    };
-};
-//выбранная категория
-const checkCategory = (category, product) => {
-   return category === CategoryType.ALL || product.category === category;
-};
+   isShow(home);
+   home.addEventListener("change", isShow(home));
 
-const checkPrice = (filters, product) => (
-   (!filters.minPrice || product.price >= filters.minPrice) &&
-   (!filters.maxPrice || product.price <= filters.maxPrice)
-);
-
-export const filterProducts = (products, category, filters) => products.filter((product) => {
-   if (!(product.filters && checkCategory(category, product) && checkPrice(filters, product))) {
-      return false;
+   /*
+   function isShow () {
+      for (let i = 0 ; i < card.length; i++) {
+         if (this.checked) {
+            if (card[i].getAttribute('data-check') === 'home') {
+               card[i].classList.add('card-show');
+               card[i].classList.remove('card-hidden');
+            } else {
+               card[i].classList.add('card-hidden');
+               card[i].classList.remove('card-show');
+            }
+         } else {
+            card[i].classList.add('card-show');
+            card[i].classList.remove('card-hidden');
+         }
+      }
    }
-switch (category) {
-   case CategoryType.HOME:
-   return (
-      checkhomeType(filters[`home-type`], product.filters.type)
-   );
-   case CategoryType.CHRISTMASS:
-   return (
-      checkchristmassType(filters[`christmass-type`], product.filters.type)
-   );
-   case CategoryType.ACCESSORIES:
-   return (
-      checkaccessoriesType(filters[`accessories-type`], product.filters.type) 
-   );
-   case CategoryType.PAINTINGS:
-   return (
-      checkpaintingsType(filters[`paintings-type`], product.filters[`paintings-type`])
-   );
-   default:
-   return true;
-   }
-});
+   
 
-
+/*
+if (home.checked) {
+   cardHome.classListAdd('show');
+} else {
+   cardHome.classListAdd('hidden');
+}
+if (christmas.checked) {
+   cardChristmas.classListAdd('show');
+} else {
+   cardChristmas.classListAdd('hidden');
+}
+if (accessories.checked) {
+   cardAccessories.classListAdd('show');
+} else {
+   cardAccessories.classListAdd('hidden');
+}
+if (painting.checked) {
+   cardPaintings.classListAdd('show');
+} else {
+   cardPaintings.classListAdd('hidden');
+}
+*/
 //Бургер-меню
 const menuIcon = document.querySelector('.menu__icon');
 if (menuIcon) {

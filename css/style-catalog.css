@@ -49,7 +49,7 @@ html, body {
   position: relative;
 }
 
-.vissualy-hidden {
+.visually-hidden {
   display: none;
 }
 
@@ -336,8 +336,12 @@ img {
   -webkit-transform: scale(2);
           transform: scale(2);
 }
-.visually-hidden {
-  display: none;
+.card-hidden {
+  display: none !important;
+}
+
+.card-show {
+  display: block !important;
 }
 
 .page {

@@ -2,8 +2,11 @@
 @import "style-header.scss";
 @import "style-footer.scss";
 
-.visually-hidden {
-   display: none;
+.card-hidden {
+   display: none !important;
+}
+.card-show {
+	display: block !important;
 }
 
 .page {
