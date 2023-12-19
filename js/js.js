@@ -7,13 +7,14 @@ const cardHome = document.querySelectorAll(".card[data-check=painting]");
 const cardPaintings = document.querySelectorAll(".card[data-check=painting]");
 const cardAccessories = document.querySelectorAll(".card[data-check=painting]");
 const cardChristmas = document.querySelectorAll(".card[data-check=painting]");
-
+/*
    function isShow (type) {
       for (let i = 0; i < card.length; i++) {
-         if (type.checked) {
+         if (this.checked) {
             if (card[i].getAttribute('data-check') === type) {
                card[i].classList.add('card-show');
                card[i].classList.remove('card-hidden');
+               console.log('rtt')
             } else {
                card[i].classList.add('card-hidden');
                card[i].classList.remove('card-show');
@@ -21,19 +22,38 @@ const cardChristmas = document.querySelectorAll(".card[data-check=painting]");
          } else {
             card[i].classList.add('card-show');
             card[i].classList.remove('card-hidden');
+            console.log('ffjgjgggg')
          }
       }
    };
-   isShow(home);
-   home.addEventListener("change", isShow(home));
-
-   /*
+*/
+const filters = document.querySelectorAll('a[data-filter]');
+for (let filter of filters) {
+   filter.addEventListener('click', function(e) {
+      console.log('click')
+      e.preventDefault();
+      const catId = filter.getAttribute('data-filter');
+      const allCards = document.querySelectorAll('.card');
+      
+      allCards.forEach(function (card) {
+         if (card.getAttribute('data-check') == catId){
+               card.classList.add('card-show');
+               card.classList.remove('card-hidden');
+            } else {
+               card.classList.add('card-hidden');
+               card.classList.remove('card-show');
+            }
+      })
+   });
+}
+/* home.addEventListener("change", isShow());
    function isShow () {
       for (let i = 0 ; i < card.length; i++) {
          if (this.checked) {
             if (card[i].getAttribute('data-check') === 'home') {
                card[i].classList.add('card-show');
                card[i].classList.remove('card-hidden');
+               console.log('rtt')
             } else {
                card[i].classList.add('card-hidden');
                card[i].classList.remove('card-show');
@@ -41,6 +61,7 @@ const cardChristmas = document.querySelectorAll(".card[data-check=painting]");
          } else {
             card[i].classList.add('card-show');
             card[i].classList.remove('card-hidden');
+            console.log('rtt')
          }
       }
    }
