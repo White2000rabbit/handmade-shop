@@ -7,6 +7,32 @@ const cardHome = document.querySelectorAll(".card[data-check=painting]");
 const cardPaintings = document.querySelectorAll(".card[data-check=painting]");
 const cardAccessories = document.querySelectorAll(".card[data-check=painting]");
 const cardChristmas = document.querySelectorAll(".card[data-check=painting]");
+const checkboxes = document.querySelectorAll('input[id]');
+
+for (let checkbox of checkboxes) {
+   checkbox.addEventListener('change', function() {
+      console.log('change')
+      const checkId = checkbox.getAttribute('data-filter');
+      const allCards = document.querySelectorAll('.card');
+      
+      allCards.forEach(function (card) {
+         if (checkbox.checked) {
+            if (card.getAttribute('data-check') == checkId) {
+               card.classList.add('card-show'); 
+               card.classList.remove('card-hidden');
+            } else {
+               card.classList.add('card-hidden');
+               card.classList.remove('card-show');
+            }
+         } else {
+            card.classList.add('card-show');
+            card.classList.remove('card-hidden');
+            console.log('all-show')
+         }
+      })
+   })
+};
+
 /*
    function isShow (type) {
       for (let i = 0; i < card.length; i++) {
@@ -27,6 +53,8 @@ const cardChristmas = document.querySelectorAll(".card[data-check=painting]");
       }
    };
 */
+//ВЕРХНИЙ ФИЛЬТР
+
 const filters = document.querySelectorAll('a[data-filter]');
 for (let filter of filters) {
    filter.addEventListener('click', function(e) {
