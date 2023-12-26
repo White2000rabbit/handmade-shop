@@ -33,7 +33,7 @@ menuIcon.addEventListener('click', function(e) {
 const link = document.querySelectorAll(".card-container__link")
 const modal = document.querySelector('.modal');
 link.forEach(item => {
-      item.addEventListener('click', function() {
+      item.addEventListener('click', function() {                                
       const wrap = item.closest('.card');
       const modal_desc = document.querySelector('.modal__descr');
       
