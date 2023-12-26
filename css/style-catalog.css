@@ -49,7 +49,7 @@ html, body {
   position: relative;
 }
 
-.visually-hidden {
+.vissualy-hidden {
   display: none;
 }
 
@@ -342,6 +342,52 @@ img {
 
 .card-show {
   display: block !important;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(12, 43, 61, 0.3);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  overflow-y: hidden;
+  pointer-events: none;
+}
+
+.modal-open {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-box {
+  position: relative;
+  width: 70%;
+  height: 80%;
+  background-color: #f4f7f9;
+  -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow-y: auto;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
 }
 
 .page {

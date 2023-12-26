@@ -9,6 +9,47 @@
 	display: block !important;
 }
 
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10; 
+ 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ 
+	visibility: hidden;
+	opacity: 0;
+ 
+	background-color: rgba(12, 43, 61, 0.3);
+ 
+	transition-duration: 0.2s;
+	transition-property: opacity;
+ 
+	overflow-y: hidden;
+	pointer-events: none;
+ }
+ 
+ .modal-open {
+	pointer-events: auto;
+	visibility: visible;
+	opacity: 1;
+} 
+
+.modal-box {
+	position: relative;
+	width: 70%;
+	height: 80%;
+	background-color: #f4f7f9;
+	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+ }
+
 .page {
 	height: auto;
    margin: 0 auto;

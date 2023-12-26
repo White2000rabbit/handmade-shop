@@ -38,37 +38,9 @@
                </ul>
          </section>
          <div class="catalog">
-            <aside class="catalog__aside filter">
-                     <fieldset class="filter__type">
-                        <legend>Категория товара</legend>
-                        <ul class="filter__checkboxes-list">
-                           <li class="filter__checkboxes-item">
-                              <input class="visually-hidden" type="checkbox" name="home" value="home" id="home" data-filter="home">
-                              <label for="home">Для дома</label>
-                           </li>
-                           <li class="filter__checkboxes-item">
-                              <input class="visually-hidden" type="checkbox" name="christmas" value="christmas" id="christmas" data-filter="christmas">
-                              <label for="christmas">Елочные игрушки</label>
-                           </li>
-                           <li class="filter__checkboxes-item">
-                              <input class="visually-hidden" type="checkbox" name="accessories" value="accessories" id="accessories"data-filter="accessories" >
-                              <label for="accessories">Украшения</label>
-                           </li>
-                           <li class="filter__checkboxes-item">
-                           <input class="visually-hidden" type="checkbox" name="painting" value="painting" id="painting" data-filter="painting">
-                           <label for="painting">Интерьерные картины</label>
-                           </li>
-                        </ul>
-                     </fieldset>
-                     <div class="filter__range">
-                        <label for="range">Цена, ₽</label>
-                        <input type="text" id="range" />
-                     </div>
-                     <button class="button filter__button" type="submit">Показать</button>
-            </aside>
             <section class="catalog__content">
-                  <div class="card-container card" data-check="painting">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card painting" data-check="painting">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-1.jpeg" alt="Морская лагуна">
                         </div>
@@ -85,8 +57,8 @@
                         </div>
                      </a>
                   </div>
-                  <div class="card-container card" data-check="painting">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card painting" data-check="painting">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-2.jpeg" alt="Морская лагуна">
                         </div>
@@ -103,8 +75,8 @@
                         </div>
                      </a>
                   </div>
-                  <div class="card-container card" data-check="painting">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card painting" data-check="painting">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-3.jpeg" alt="Морская лагуна">
                         </div>
@@ -121,8 +93,8 @@
                         </div>
                      </a>
                   </div>
-                  <div class="card-container card" data-check="painting">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card painting" data-check="painting">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-4.jpeg" alt="Морская лагуна">
                         </div>
@@ -139,8 +111,8 @@
                         </div>
                      </a>
                   </div>
-                  <div class="card-container card" data-check="painting">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card painting" data-check="painting">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-5.jpeg" alt="Морская лагуна">
                         </div>
@@ -156,8 +128,8 @@
                            <p class="card__price">5000 руб.</p>
                         </div>
                   </div>
-                  <div class="card-container card" data-check="painting">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card painting" data-check="painting">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-6.jpeg" alt="Морская лагуна">
                         </div>
@@ -174,8 +146,8 @@
                         </div>
                      </a>
                   </div>
-                  <div class="card-container card" data-check="christmas">
-                     <a class="card-container__link" href="#">
+                  <div class="card-container card christmas" data-check="christmas">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-7.jpeg" alt="Морская лагуна">
                         </div>
@@ -194,7 +166,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="christmas">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-8.jpeg" alt="Морская лагуна">
                         </div>
@@ -209,7 +181,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="christmas">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-9.jpeg" alt="Морская лагуна">
                         </div>
@@ -224,7 +196,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="christmas">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-10.jpeg" alt="Морская лагуна">
                         </div>
@@ -239,7 +211,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="home">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-11.jpeg" alt="Морская лагуна">
                         </div>
@@ -254,7 +226,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="home">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-12.jpeg" alt="Морская лагуна">
                         </div>
@@ -269,7 +241,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="home">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-13.jpeg" alt="Морская лагуна">
                         </div>
@@ -284,7 +256,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="home">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-14.jpeg" alt="Морская лагуна">
                         </div>
@@ -299,7 +271,8 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="accessories">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
+                        
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-15.jpeg" alt="Морская лагуна">
                         </div>
@@ -314,7 +287,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="accessories">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-16.jpeg" alt="Морская лагуна">
                         </div>
@@ -329,7 +302,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="accessories">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-17.jpeg" alt="Морская лагуна">
                         </div>
@@ -344,7 +317,7 @@
                      </a>
                   </div>
                   <div class="card-container card" data-check="accessories">
-                     <a class="card-container__link" href="#">
+                     <a class="card-container__link" -data-modal="order" href="#">
                         <div class="carousel">
                            <img class='card__img card__img--main' width="100" height="150" src="img/card-18.jpeg" alt="Морская лагуна">
                         </div>
@@ -361,36 +334,12 @@
             </section>
          </div>
       </div>
-      <section class="popup">
-         <div class="popup__inner">
-            <button class="popup__close" type="button" aria-label="Закрыть">
-             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 8L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L8 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292893 15.7071C-0.0976311 15.3166 -0.0976311 14.6834 0.292893 14.2929L6.58579 8L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z"/>
-             </svg>
-            </button>
-            <h3 class="popup__title">Черный песок</h3>
-            <div class="popup__price">5 000 ₽</div>
-            <div class="popup__columns">
-               <div class="popup__left">
-                  <div class="popup__gallery gallery">
-                     <button class="gallery__favourite fav-add">
-                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3 7C3 13 10 16.5 11 17C12 16.5 19 13 19 7C19 4.79086 17.2091 3 15 3C12 3 11 5 11 5C11 5 10 3 7 3C4.79086 3 3 4.79086 3 7Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                     </button>
-                  <div class="gallery__main-pic">
-                     <img src="img/card-5.jpeg"  width="520" height="340" alt="Черный песок">
-                  </div>
-                  <ul class="gallery__list">
-                     <li class="gallery__item gallery__item--active">
-                        <img src="img/card-5-1.jpeg" alt="Черный песок" width="124" height="80">
-                     </li>
-                     <li class="gallery__item">
-                        <img src="img/card-5-1.jpeg" alt="Черный песок" width="124" height="80">
-                     </li>
-               </div>
+      <div class="modal" id="order">
+         <div class="modal-box">
+            <div class="modal__close">&times;</div>
+            <div class="modal__descr">Тут должен быть тайтл\описание из карточки</div>
          </div>
-      </section>
+         </div>
       <footer class="footer">
          <div class="footer__row">
             <div class="footer__column">
