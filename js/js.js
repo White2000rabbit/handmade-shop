@@ -31,16 +31,18 @@ menuIcon.addEventListener('click', function(e) {
 
 //Модальное окно;
 const link = document.querySelectorAll(".card-container__link")
-
+const modal = document.querySelector('.modal');
 link.forEach(item => {
       item.addEventListener('click', function() {
       const wrap = item.closest('.card');
       const modal_desc = document.querySelector('.modal__descr');
-      const modal = document.querySelector('.modal');
+      
       modal.classList.add('modal-open')
-      modal_desc.textContent = wrap.querySelector('.card-container__link > div').textContent;
+      modal_desc.innerHTML = wrap.querySelector('.card__content').innerHTML;
    });
 });
+const toClose = modal.querySelector('.modal__close');
+toClose.addEventListener('click', function () {modal.classList.remove('modal-open')})
 
 /*
  const modal = document.querySelector('#order');

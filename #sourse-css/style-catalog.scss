@@ -48,6 +48,9 @@
 	border-radius: 8px;
 	overflow-y: auto;
 	overscroll-behavior: contain;
+
+	display: flex;
+	flex-direction: column;
  }
 
 .page {
