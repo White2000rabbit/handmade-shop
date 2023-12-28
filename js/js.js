@@ -35,12 +35,17 @@ const modal = document.querySelector('.modal');
 link.forEach(item => {
       item.addEventListener('click', function() {                                
       const wrap = item.closest('.card');
+      
       const modal_text = document.querySelector('.modal__text');
       const modal_carousel = document.querySelector('.modal__carousel');
+      const modal_preview = document.querySelector('.modal__preview');
 
-      modal.classList.add('modal-open')
-      modal_carousel.innerHTML = wrap.querySelector('.carousel').innerHTML;
+      modal.classList.add('modal-open');
+      modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
+      modal_carousel.innerHTML = wrap.querySelector('.card__carousel').innerHTML;
       modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
+
+
    });
 });
 const toClose = modal.querySelector('.modal__close');
