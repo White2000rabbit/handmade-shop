@@ -465,28 +465,29 @@ img {
   -ms-grid-row-span: 4;
   grid-row: 1/5;
 }
-.modal__carousel img:not(:last-child) {
-  margin-bottom: 10px;
+.modal__carousel {
+  row-gap: 20px;
 }
-.modal__carousel img:nth-child(1) {
+.modal__carousel a:nth-child(1) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   -ms-grid-row: 2;
   grid-row: 2;
 }
-.modal__carousel img:nth-child(2) {
+.modal__carousel a:nth-child(2) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   -ms-grid-row: 3;
   grid-row: 3;
 }
-.modal__carousel img:nth-child(3) {
+.modal__carousel a:nth-child(3) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
+
 .modal-open {
   pointer-events: auto;
   visibility: visible;
@@ -566,34 +567,8 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.catalog__aside {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
-  margin: 0px 15px 0px 40px;
-  padding: 10px;
-}
-.catalog__aside legend {
-  margin-bottom: 10px;
-  text-align: center;
-  font-weight: 600;
-}
-.catalog__aside ul {
-  text-align: left;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-.catalog__content {
+
+.content__list {
   width: 1280px;
   margin: 0 auto;
   padding: 40px 10px 0;
@@ -633,12 +608,10 @@ img {
 .card-container {
   width: 210px;
   height: 330px;
-}
-.card-container__link {
   cursor: pointer;
   padding: 10px;
 }
-.card-container__link:hover {
+.card-container:hover {
   -webkit-box-shadow: 0px 0px 10px #554333;
           box-shadow: 0px 0px 10px #554333;
   -webkit-transition: all 0.3s ease-in-out;
@@ -684,14 +657,4 @@ img {
   letter-spacing: 1.8;
   padding-bottom: 10px;
   font-weight: 600;
-}
-.card__link::after {
-  position: absolute;
-  content: "➔";
-  top: 100px;
-  left: 60px;
-  padding-left: 3px;
-}
-.card__link:hover {
-  color: #DD845A;
 }
