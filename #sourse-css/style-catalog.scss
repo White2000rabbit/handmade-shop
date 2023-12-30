@@ -38,22 +38,31 @@
 	width: 100%;
 	height: 70%;
 	justify-content: space-around;
+
+	& a:hover {
+		box-shadow: 0px 0px 10px $color-5;
+		transition: all 0.3s ease-in-out; 
+	}
 }
 
 &__close {
 	align-self: flex-end;
+	justify-self: flex-end;
 	color:black;
 	border: 1px solid $color-4;
-	border-radius:50px;
+	border-radius:30px;
 	font-size: 42px;
-	padding: 5px;
+	padding: 7px;
 	transition: all 0.2s ease-in-out;
+	margin-bottom: 50px;
+	text-align: center;
 }
 &__close:hover {
 	background-color:$color-2;
 	color: $color-4;
 	
 }
+
 &__desc{
 	display: grid;
 	box-sizing: border-box;
@@ -76,20 +85,38 @@
 &__preview {
 	grid-column:2/3;
 	grid-row: 1/5;
+
+	&--active {
+		width: 100%;
+		height: 100%;
+	}
 }
 &__carousel  {
-	row-gap:20px;
+	display: grid;
+	margin: 0;
+	padding: 0;
+	height:150px;
 }
+&__carousel a {
+	display: block;
+	height: 50px;
+}
+
 &__carousel a:nth-child(1) {
 	grid-column: 1/2;
-	grid-row: 2;
+	grid-row: 1;
 }
 &__carousel a:nth-child(2) {
 	grid-column: 1/2;
-	grid-row: 3;
+	grid-row: 2;
+
 }
 &__carousel a:nth-child(3) {
 	grid-column: 1/2;
+	grid-row: 3;
+}
+&__carousel a:not(:last-child) {
+	margin-bottom: 15px;
 }
 }
 
@@ -112,7 +139,6 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items:center;
 	padding: 20px;
 }

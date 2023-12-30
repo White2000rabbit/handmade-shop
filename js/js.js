@@ -33,8 +33,8 @@ menuIcon.addEventListener('click', function(e) {
 const card = document.querySelectorAll(".card");
 const modal = document.querySelector('.modal');
 card.forEach(item => {
-      item.addEventListener('click', function(evt) { 
-         evt.preventDefault();                              
+      item.addEventListener('click', function(e) { 
+         e.preventDefault();                              
          const wrap = item.closest('.card');
          const modal_text = document.querySelector('.modal__text');
          const modal_carousel = document.querySelector('.modal__carousel');
@@ -45,27 +45,47 @@ card.forEach(item => {
       modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
       modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
 
-
+      const activePhoto = document.querySelector(".card__preview");
+      const carousel_items = document.querySelectorAll(".card__img");
+      const currentActive = document.querySelector(".card--active");
+      carousel_items.forEach(item => {
+      item.addEventListener('click', function(e) { 
+         e.preventDefault();                       
+         console.log('yes');
+         
+         item.classList.add('card--active');
+         /*
+         currentActive.classList.remove("card--active");
+         activePhoto.href = item.src;
+         */
+   })
+   }   )
       })
    });
-
+         
 const toClose = modal.querySelector('.modal__close');
 toClose.addEventListener('click', function () {modal.classList.remove('modal-open')})
-
-//галерея в модальном окне 
 /*
-      modal_carousel.innerHTML = wrap.querySelector('.card__carousel').innerHTML;
-const activePhoto = document.querySelector("._active-img");
-let carousel = document.querySelectorAll(".modal__carousel div");
-for (let item of carousel) {
- item.addEventListener('onclick', function () { 
-    const currentActive = document.querySelector(".modal__carousel ._active-img");
-    currentActive.classList.remove("_active-img");
-    item.classList.add("_active-img");
+//галерея в модальном окне 
+let activePhoto = document.querySelector(".card__preview");
+let carousel_items = document.querySelector(".card__img");
 
-    activePhoto.src = item.href;
-  });
+if (modal.classList.contains('modal-open')) {
+   carousel_items.addEventListener('click', function (evt) {
+   console.log('yes')
+   evt.preventDefault();})
+   } 
+  /*
+for (let i=0; i<=carousel_items.length; i++) { 
+   console.log('yno')
+  i.addEventListener('click', function (evt) {
+    console.log('yes')
+   evt.preventDefault();
+   img.classList.add('card__preview');
+   activePhoto.classList.remove('card__preview');
+})
 }
+
 /*
  const modal = document.querySelector('#order');
 const modalDescription = modal.querySelector('.modal__descr');
