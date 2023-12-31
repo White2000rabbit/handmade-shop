@@ -379,6 +379,9 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
+.modal__content a {
+  border-radius: 15px;
+}
 .modal__content a:hover {
   -webkit-box-shadow: 0px 0px 10px #000000;
           box-shadow: 0px 0px 10px #000000;
@@ -465,6 +468,7 @@ img {
   width: 100%;
   height: 100%;
   vertical-align: top;
+  border-radius: inherit;
 }
 .modal__preview {
   -ms-grid-column: 2;
@@ -473,10 +477,32 @@ img {
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
   grid-row: 1/5;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: visible;
+          animation-name: visible;
 }
-.modal__preview--active {
-  width: 100%;
-  height: 100%;
+.modal__preview img {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-name: visible;
+          animation-name: visible;
+}
+@-webkit-keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .modal__carousel {
   display: -ms-grid;

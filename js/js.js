@@ -45,19 +45,13 @@ card.forEach(item => {
       modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
       modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
 
-      const activePhoto = document.querySelector(".card__preview");
-      const carousel_items = document.querySelectorAll(".card__img");
-      const currentActive = document.querySelector(".card--active");
+      const activePhoto = document.querySelector(".modal__preview");
+      const carousel_items = document.querySelectorAll(".card__link");
+
       carousel_items.forEach(item => {
-      item.addEventListener('click', function(e) { 
-         e.preventDefault();                       
-         console.log('yes');
-         
-         item.classList.add('card--active');
-         /*
-         currentActive.classList.remove("card--active");
-         activePhoto.href = item.src;
-         */
+         item.addEventListener('click', function(e) { 
+            e.preventDefault();
+            activePhoto.innerHTML = item.innerHTML;
    })
    }   )
       })
