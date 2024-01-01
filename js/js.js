@@ -58,7 +58,9 @@ card.forEach(item => {
    });
          
 const toClose = modal.querySelector('.modal__close');
-toClose.addEventListener('click', function () {modal.classList.remove('modal-open')})
+toClose.addEventListener('click', function (evt) {
+   evt.preventDefault();
+   modal.classList.remove('modal-open')})
 /*
 //галерея в модальном окне 
 let activePhoto = document.querySelector(".card__preview");

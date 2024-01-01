@@ -49,7 +49,7 @@ html, body {
   position: relative;
 }
 
-.vissualy-hidden {
+.visually-hidden {
   display: none;
 }
 
@@ -409,7 +409,7 @@ img {
   padding-bottom: 20px;
   overflow: hidden;
 }
-.card__desc {
+.card__title {
   letter-spacing: 1.8;
   padding: 10px 0;
   max-height: 64px;
