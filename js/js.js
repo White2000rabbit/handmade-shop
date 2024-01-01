@@ -7,7 +7,7 @@ for (let filter of filters) {
       e.preventDefault();
       const catId = filter.getAttribute('data-filter');
       const allCards = document.querySelectorAll('.card');
-      
+   
       allCards.forEach(function (card) {
          if (card.getAttribute('data-check') == catId){
                card.classList.add('card-show');
