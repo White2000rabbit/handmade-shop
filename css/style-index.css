@@ -457,6 +457,7 @@ img {
   position: relative;
   z-index: 3;
   padding: 70px;
+  margin-top: 60px;
 }
 .parallax__label {
   display: -webkit-box;
@@ -509,7 +510,7 @@ img {
 }
 .parallax-img__frame {
   top: 15%;
-  left: -12%;
+  left: -20%;
   z-index: 4;
 }
 .parallax-img__frame img {
