@@ -1,3 +1,73 @@
+'use strict'
+window.onload = function () {
+
+//Параллакс 
+const parallax = document.querySelector('.parallax');
+if (parallax) {
+   const content = document.querySelector('.parallax__container');
+   const frame = document.querySelector('.parallax-img__frame');
+   const ocean = document.querySelector('.parallax-img__ocean');
+   const palm = document.querySelector('.parallax-img__palm');
+   //коэффициенты
+   const forFrame = 10;
+   const forOcean = 30;
+   const forPalm = 20;
+   //скорость анимации
+   const speed = 0.5;
+
+   let positionX = 0, positionY = 0;
+   let coordXprocent = 0, coordYprocent = 0;
+
+   function setParallaxStyle() {
+      const distX = coordXprocent - positionX;
+      const distY = coordYprocent - positionY;
+
+      positionX = positionX + (distX * speed);
+      positionY = positionY + (distY * speed);
+
+      //передаем стили объекта
+      frame.style.cssText = `transform: translate(${positionX / forFrame}%,${positionY / forFrame}%);`;
+      ocean.style.cssText = `transform: translate(${positionX / forOcean}%,${positionY / forOcean}%);`;
+      palm.style.cssText = `transform: translate(${positionX / forPalm}%,${positionY / forPalm}%);`;
+   
+      requestAnimationFrame(setParallaxStyle);
+   }
+   setParallaxStyle();
+   parallax.addEventListener('mousemove', function (e) {
+      const parallaxWidth = parallax.offsetWidth;
+      const parallaxHeight = parallax.offsetHeight;
+      //0 по середине
+      const coordX = e.pageX - parallaxWidth / 2;
+      const coordY = e.pageY - parallaxHeight / 2; 
+      //получаем процентные значения
+      coordXprocent = coordX / parallaxWidth * 100;
+      coordYprocent = cordY / parallaxHeight * 100;
+   });
+
+   //параллакс при скролле
+   let thresholdSets = [];
+   for (let i = 0; i <= 1.0; i += 0.005) {
+      thresholdSets.push(i);
+   }
+   const callback = function (entries, observer) {
+      const scrollTopProcent = window.pageYOffset / parallax.offsetHeight * 100;
+      setParallaxItemsStyle(scrollTopProcent);
+   };
+   const observer = new IntersectionObserver (callback, {
+      threshold: thresholdSets
+   });
+
+   observer.observe(document.querySelector('.content'));
+
+   function setParallaxItemsStyle(scrollTopProcent) {
+      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 1}%);`;
+      ocean.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 15}%);`;
+      palm.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 7}%);`;
+   
+   }
+}
+
+
 
 //ВЕРХНИЙ ФИЛЬТР
 const filters = document.querySelectorAll('a[data-filter]');
@@ -7,7 +77,7 @@ for (let filter of filters) {
       e.preventDefault();
       const catId = filter.getAttribute('data-filter');
       const allCards = document.querySelectorAll('.card');
-      
+   
       allCards.forEach(function (card) {
          if (card.getAttribute('data-check') == catId){
                card.classList.add('card-show');
@@ -33,8 +103,8 @@ menuIcon.addEventListener('click', function(e) {
 const card = document.querySelectorAll(".card");
 const modal = document.querySelector('.modal');
 card.forEach(item => {
-      item.addEventListener('click', function(evt) { 
-         evt.preventDefault();                              
+      item.addEventListener('click', function(e) { 
+         e.preventDefault();                              
          const wrap = item.closest('.card');
          const modal_text = document.querySelector('.modal__text');
          const modal_carousel = document.querySelector('.modal__carousel');
@@ -45,27 +115,43 @@ card.forEach(item => {
       modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
       modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
 
+      const activePhoto = document.querySelector(".modal__preview");
+      const carousel_items = document.querySelectorAll(".card__link");
 
+      carousel_items.forEach(item => {
+         item.addEventListener('click', function(e) { 
+            e.preventDefault();
+            activePhoto.innerHTML = item.innerHTML;
+   })
+   }   )
       })
    });
-
+         
 const toClose = modal.querySelector('.modal__close');
-toClose.addEventListener('click', function () {modal.classList.remove('modal-open')})
-
-//галерея в модальном окне 
+toClose.addEventListener('click', function (evt) {
+   evt.preventDefault();
+   modal.classList.remove('modal-open')})
 /*
-      modal_carousel.innerHTML = wrap.querySelector('.card__carousel').innerHTML;
-const activePhoto = document.querySelector("._active-img");
-let carousel = document.querySelectorAll(".modal__carousel div");
-for (let item of carousel) {
- item.addEventListener('onclick', function () { 
-    const currentActive = document.querySelector(".modal__carousel ._active-img");
-    currentActive.classList.remove("_active-img");
-    item.classList.add("_active-img");
+//галерея в модальном окне 
+let activePhoto = document.querySelector(".card__preview");
+let carousel_items = document.querySelector(".card__img");
 
-    activePhoto.src = item.href;
-  });
+if (modal.classList.contains('modal-open')) {
+   carousel_items.addEventListener('click', function (evt) {
+   console.log('yes')
+   evt.preventDefault();})
+   } 
+  /*
+for (let i=0; i<=carousel_items.length; i++) { 
+   console.log('yno')
+  i.addEventListener('click', function (evt) {
+    console.log('yes')
+   evt.preventDefault();
+   img.classList.add('card__preview');
+   activePhoto.classList.remove('card__preview');
+})
 }
+
 /*
  const modal = document.querySelector('#order');
 const modalDescription = modal.querySelector('.modal__descr');
@@ -86,3 +172,4 @@ document.addEventListener('click', event => {
   overlay.classList.add('is-visible');
 });
 */
+}
