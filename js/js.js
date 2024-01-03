@@ -60,9 +60,9 @@ if (parallax) {
    observer.observe(document.querySelector('.content'));
 
    function setParallaxItemsStyle(scrollTopProcent) {
-      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 0.5}%);`;
-      ocean.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 4}%);`;
-      palm.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 2}%);`;
+      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 1}%);`;
+      ocean.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 15}%);`;
+      palm.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 7}%);`;
    
    }
 }

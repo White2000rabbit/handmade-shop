@@ -68,9 +68,9 @@ html, body {
   min-height: 25px;
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid #DD845A;
-  background-color: #DD845A;
-  color: rgba(252, 243, 210, 0.8);
+  border: 1px solid #045b79;
+  background-color: #045b79;
+  color: rgb(252, 243, 210);
 }
 .button:after {
   content: "";
@@ -79,7 +79,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #DD845A;
+  background-color: #045b79;
   border-radius: 5px;
   z-index: -2;
 }
@@ -90,7 +90,7 @@ html, body {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #c25a28;
+  background-color: #02232f;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-radius: 5px;
@@ -113,11 +113,11 @@ html, body {
 .fa-house:hover {
   font-size: 30px;
   width: 40px;
-  color: #DD845A;
+  color: #045b79;
 }
 
 .fa-grip-lines:hover {
-  color: #DD845A;
+  color: #045b79;
 }
 
 .arrow-top {
@@ -291,7 +291,8 @@ img {
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background-color: rgba(252, 243, 210, 0.8);
+  background-color: #8FBC8F;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,7 +357,7 @@ img {
 }
 
 .footer {
-  background-color: rgba(252, 243, 210, 0.8);
+  background-color: #8FBC8F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,7 +366,9 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  min-height: auto;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   padding: 35px 10px 20px 10px;
   width: 100%;
 }
@@ -440,7 +443,7 @@ img {
 ._container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 50px 1px;
+  padding: 50px 10px;
 }
 
 .parallax {
@@ -450,7 +453,7 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 80px;
+  top: 130px;
   left: 0;
 }
 .parallax__container {
@@ -485,6 +488,9 @@ img {
   font-size: 32px;
   min-height: 50px;
   line-height: 1.2;
+}
+.parallax__button {
+  text-align: right;
 }
 .parallax__img {
   position: absolute;
@@ -522,6 +528,7 @@ img {
 .parallax-img__ocean {
   top: 15%;
   z-index: 2;
+  height: 100vh;
 }
 .parallax-img__ocean img {
   height: 100%;
@@ -547,9 +554,22 @@ img {
 }
 
 .parallax__content {
-  background-color: rgba(252, 243, 210, 0.8);
+  background-color: rgb(252, 243, 210);
+  opacity: 1;
   position: relative;
-  z-index: 2;
+  z-index: 5;
+  margin-bottom: 50px;
+}
+
+.parallax__content:first-child:before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(252, 243, 210)), to(rgba(252, 243, 210, 0)));
+  background: linear-gradient(to top, rgb(252, 243, 210), rgba(252, 243, 210, 0));
 }
 
 .modal {
@@ -782,8 +802,9 @@ img {
 
 .section {
   margin: 0 auto;
-  padding: 20px 50px 50px 50px;
+  padding: 50px 50px 50px 50px;
   width: 100%;
+  margin-top: 40px;
 }
 .section__title {
   font-size: 2rem;

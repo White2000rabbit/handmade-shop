@@ -68,9 +68,9 @@ html, body {
   min-height: 25px;
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid #DD845A;
-  background-color: #DD845A;
-  color: rgba(252, 243, 210, 0.8);
+  border: 1px solid #045b79;
+  background-color: #045b79;
+  color: rgb(252, 243, 210);
 }
 .button:after {
   content: "";
@@ -79,7 +79,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #DD845A;
+  background-color: #045b79;
   border-radius: 5px;
   z-index: -2;
 }
@@ -90,7 +90,7 @@ html, body {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #c25a28;
+  background-color: #02232f;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-radius: 5px;
@@ -113,11 +113,11 @@ html, body {
 .fa-house:hover {
   font-size: 30px;
   width: 40px;
-  color: #DD845A;
+  color: #045b79;
 }
 
 .fa-grip-lines:hover {
-  color: #DD845A;
+  color: #045b79;
 }
 
 .arrow-top {
@@ -291,7 +291,8 @@ img {
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background-color: rgba(252, 243, 210, 0.8);
+  background-color: #8FBC8F;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,7 +357,7 @@ img {
 }
 
 .footer {
-  background-color: rgba(252, 243, 210, 0.8);
+  background-color: #8FBC8F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,7 +366,9 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  min-height: auto;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   padding: 35px 10px 20px 10px;
   width: 100%;
 }

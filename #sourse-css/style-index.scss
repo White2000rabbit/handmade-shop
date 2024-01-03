@@ -10,7 +10,7 @@
 ._container {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 50px 1px;
+	padding: 50px 10px;
 }
 .parallax {
 	min-height: 100vh;
@@ -19,7 +19,7 @@
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		top:80px;
+		top:130px;
 		left:0;
 	}
 
@@ -50,6 +50,9 @@
 		font-size: 32px;
 		min-height: 50px;
 		line-height: 1.2;
+	}
+	&__button {
+		text-align: right;
 	}
 	&__img {
 		position: absolute;
@@ -89,12 +92,12 @@
 	&__ocean {
 		top: 15%;
 		z-index: 2;
+		height: 100vh;
 	}
 	&__ocean img{
 		height: 100%;
 		width: 100%;
 		object-fit: fill;
-		
 	}
 	&__palm {
 		top: 25%;
@@ -113,12 +116,21 @@
 	}
 }
 .parallax__content {
-	background-color: rgb(252, 243, 210, 0.8);
+	background-color: $color-1;
+	opacity: 1;
 	position: relative;
-	z-index:2;
-
+	z-index:5;
+	margin-bottom: 50px;
 }
-
+.parallax__content:first-child:before {
+	content:'';
+	position: absolute;
+	top:-100px;
+	left:0;
+	height: 40px;
+	width:100%;
+	background: linear-gradient(to top, rgb(252, 243, 210, 1), rgb(252, 243, 210, 0));
+}
 .modal {
 	position: fixed;
 	top: 0;
@@ -268,12 +280,14 @@
 }
 .section {
 	margin: 0 auto;
-	padding: 20px 50px 50px 50px;
+	padding: 50px 50px 50px 50px;
 	width: 100%;
+	margin-top: 40px;
 
 		&__title {
          font-size: 2rem;
 			padding: 20px;
+			
 		}
 
 		&__description {
