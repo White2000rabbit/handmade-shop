@@ -70,7 +70,7 @@ html, body {
   text-transform: uppercase;
   border: 1px solid #DD845A;
   background-color: #DD845A;
-  color: #E4E7D4;
+  color: rgba(252, 243, 210, 0.8);
 }
 .button:after {
   content: "";
@@ -288,7 +288,10 @@ img {
 }
 
 .header {
-  background-color: #E4E7D4;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(252, 243, 210, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,7 +356,7 @@ img {
 }
 
 .footer {
-  background-color: #E4E7D4;
+  background-color: rgba(252, 243, 210, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,6 +435,120 @@ img {
 
 .card-show {
   display: block !important;
+}
+
+._container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 1px;
+}
+
+.parallax {
+  min-height: 100vh;
+}
+.parallax__body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 80px;
+  left: 0;
+}
+.parallax__container {
+  position: relative;
+  z-index: 3;
+  padding: 70px;
+}
+.parallax__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #000000;
+  margin: 0px 0px 30px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+.parallax__label::before {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  content: "";
+  margin: 0px 30px 0px 0px;
+  height: 1px;
+  background-color: #000000;
+}
+.parallax__title {
+  font-size: 32px;
+  min-height: 50px;
+  line-height: 1.2;
+}
+.parallax__img {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: -30%;
+  left: -10%;
+  z-index: 1;
+}
+
+.parallax-img__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.parallax-img__frame, .parallax-img__ocean, .parallax-img__palm {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+}
+.parallax-img__frame {
+  top: 15%;
+  left: -12%;
+  z-index: 4;
+}
+.parallax-img__frame img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.parallax-img__ocean {
+  top: 15%;
+  z-index: 2;
+}
+.parallax-img__ocean img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.parallax-img__palm {
+  top: 25%;
+  left: 25%;
+  z-index: 3;
+}
+.parallax-img__palm img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-aspect-ratio: 3/2) {
+  .parallax-img__palm {
+    background-position: 20% top;
+  }
+}
+
+.parallax__content {
+  background-color: rgba(252, 243, 210, 0.8);
+  position: relative;
+  z-index: 2;
 }
 
 .modal {

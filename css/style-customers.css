@@ -70,7 +70,7 @@ html, body {
   text-transform: uppercase;
   border: 1px solid #DD845A;
   background-color: #DD845A;
-  color: #E4E7D4;
+  color: rgba(252, 243, 210, 0.8);
 }
 .button:after {
   content: "";
@@ -288,7 +288,10 @@ img {
 }
 
 .header {
-  background-color: #E4E7D4;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(252, 243, 210, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,7 +356,7 @@ img {
 }
 
 .footer {
-  background-color: #E4E7D4;
+  background-color: rgba(252, 243, 210, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

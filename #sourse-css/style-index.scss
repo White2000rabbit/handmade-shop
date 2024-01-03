@@ -7,6 +7,116 @@
 .card-show {
 	display: block !important;
 }
+._container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px 1px;
+}
+.parallax {
+	min-height: 100vh;
+
+	&__body {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top:80px;
+		left:0;
+	}
+
+	&__container {
+		position:relative;
+		z-index: 3;
+		padding: 70px;
+	}
+
+	&__label {
+		display: flex;
+		font-size: 12px;
+		letter-spacing: 4px;
+		color:$color-5;
+		margin: 0px 0px 30px 0px;
+		align-items: center;
+		text-transform: uppercase;
+	}
+	&__label::before {
+		flex: 0 0 50px;
+		content: '';
+		margin: 0px 30px 0px 0px;
+		height: 1px;
+		background-color:$color-5;
+	}
+	&__title {
+		font-size: 32px;
+		min-height: 50px;
+		line-height: 1.2;
+	}
+	&__img {
+		position: absolute;
+		width: 120%;
+		height: 100%;
+		top: -30%;
+		left: -10%;
+		z-index:1;
+	}
+	
+}
+.parallax-img {
+
+	&__item {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left:0;
+	}
+	&__frame, &__ocean, &__palm {
+		position: absolute;
+		width: 100%;
+		height:100vh;
+		left:0;
+	}
+	&__frame {
+		top: 15%;
+		left:-12%;
+		z-index: 4;
+	}
+	&__frame img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	&__ocean {
+		top: 15%;
+		z-index: 2;
+	}
+	&__ocean img{
+		height: 100%;
+		width: 100%;
+		object-fit: fill;
+		
+	}
+	&__palm {
+		top: 25%;
+		left: 25%;
+		z-index: 3;
+	}
+	&__palm img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	@media (max-aspect-ratio: 3/2) {
+		&__palm {
+			background-position: 20% top;
+		}
+	}
+}
+.parallax__content {
+	background-color: rgb(252, 243, 210, 0.8);
+	position: relative;
+	z-index:2;
+
+}
 
 .modal {
 	position: fixed;
