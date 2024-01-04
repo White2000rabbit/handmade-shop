@@ -86,21 +86,22 @@ html, body {
 .button:before {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  width: 0%;
-  height: 100%;
+  width: 100%;
+  height: 0%;
   background-color: #02232f;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   z-index: -1;
 }
 .button:hover {
   color: #fff;
 }
 .button:hover:before {
-  width: 100%;
+  height: 100%;
 }
 
 .fa-solid,
@@ -113,11 +114,11 @@ html, body {
 .fa-house:hover {
   font-size: 30px;
   width: 40px;
-  color: #045b79;
+  color: rgb(252, 243, 210);
 }
 
 .fa-grip-lines:hover {
-  color: #045b79;
+  color: rgb(252, 243, 210);
 }
 
 .arrow-top {
@@ -127,6 +128,7 @@ html, body {
   width: 60px;
   height: 60px;
   margin-right: 15px;
+  z-index: 1000;
 }
 
 .arrow-top > a {
@@ -142,7 +144,8 @@ html, body {
 }
 
 .arrow-top > a:hover {
-  background-color: rgba(221, 132, 90, 0.5);
+  background-color: rgba(4, 91, 121, 0.5);
+  color: #000000;
 }
 
 img {
@@ -195,8 +198,8 @@ img {
   padding: 10px;
 }
 .card-container:hover {
-  -webkit-box-shadow: 0px 0px 10px #554333;
-          box-shadow: 0px 0px 10px #554333;
+  -webkit-box-shadow: 0px 0px 10px #8FBC8F;
+          box-shadow: 0px 0px 10px #8FBC8F;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -217,6 +220,7 @@ img {
 .card__img {
   width: 190px;
   height: 190px;
+  border: 1px solid #554333;
 }
 .card > img {
   display: block;
@@ -357,7 +361,6 @@ img {
 }
 
 .footer {
-  background-color: #8FBC8F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,8 +372,12 @@ img {
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
-  padding: 35px 10px 20px 10px;
   width: 100%;
+  position: relative;
+  z-index: 5;
+  padding: 50px 10px 20px 10px;
+  margin-bottom: 50px;
+  background-color: #8FBC8F;
 }
 .footer__row {
   display: -webkit-box;
@@ -411,6 +418,14 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.footer__legal {
+  border-top: 1px solid #000000;
+  padding-top: 15px;
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 0.5;
+}
+
 .footer-link:hover {
   font-weight: 600;
 }
@@ -431,6 +446,22 @@ img {
 .social__link:hover {
   -webkit-transform: scale(2);
           transform: scale(2);
+}
+@-webkit-keyframes isVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes isVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .card-hidden {
   display: none !important;
@@ -461,6 +492,11 @@ img {
   z-index: 3;
   padding: 70px;
   margin-top: 60px;
+  opacity: 0;
+  -webkit-animation: 2s isVisible ease-in-out;
+          animation: 2s isVisible ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .parallax__label {
   display: -webkit-box;
@@ -491,6 +527,15 @@ img {
 }
 .parallax__button {
   text-align: right;
+  position: relative;
+}
+.parallax__button:after {
+  content: "🠓";
+  position: absolute;
+  top: 6px;
+  left: -6px;
+  color: #D6E0D5;
+  font-size: 18px;
 }
 .parallax__img {
   position: absolute;
@@ -561,24 +606,13 @@ img {
   margin-bottom: 50px;
 }
 
-.parallax__content:first-child:before {
-  content: "";
-  position: absolute;
-  top: -100px;
-  left: 0;
-  height: 40px;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgb(252, 243, 210)), to(rgba(252, 243, 210, 0)));
-  background: linear-gradient(to top, rgb(252, 243, 210), rgba(252, 243, 210, 0));
-}
-
 .modal {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -710,28 +744,6 @@ img {
   -webkit-animation-name: visible;
           animation-name: visible;
 }
-.modal__preview img {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-name: visible;
-          animation-name: visible;
-}
-@-webkit-keyframes visible {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes visible {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .modal__carousel {
   display: -ms-grid;
   display: grid;
@@ -805,6 +817,8 @@ img {
   padding: 50px 50px 50px 50px;
   width: 100%;
   margin-top: 40px;
+  -webkit-animation: 2s isVisible ease-in-out;
+          animation: 2s isVisible ease-in-out;
 }
 .section__title {
   font-size: 2rem;

@@ -1,6 +1,17 @@
 @import "common-style.scss";
 @import "style-header.scss";
 @import "style-footer.scss";
+
+
+@keyframes isVisible {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+	 }
+
 .card-hidden {
    display: none !important;
 }
@@ -28,6 +39,9 @@
 		z-index: 3;
 		padding: 70px;
 		margin-top: 60px;
+		opacity: 0;
+  		animation: 2s  isVisible ease-in-out;
+		animation-fill-mode: forwards;
 	}
 
 	&__label {
@@ -50,10 +64,22 @@
 		font-size: 32px;
 		min-height: 50px;
 		line-height: 1.2;
-	}
+		
+}
+	
 	&__button {
 		text-align: right;
+		position: relative;
 	}
+	&__button:after {
+		content:'\1F813';
+		position: absolute;
+		top:6px;
+		left: -6px;
+		color: $color-4;
+		font-size: 18px;
+	}
+
 	&__img {
 		position: absolute;
 		width: 120%;
@@ -122,22 +148,14 @@
 	z-index:5;
 	margin-bottom: 50px;
 }
-.parallax__content:first-child:before {
-	content:'';
-	position: absolute;
-	top:-100px;
-	left:0;
-	height: 40px;
-	width:100%;
-	background: linear-gradient(to top, rgb(252, 243, 210, 1), rgb(252, 243, 210, 0));
-}
+
 .modal {
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 10; 
+	z-index: 1000; 
  
 	display: flex;
 	align-items: center;
@@ -215,18 +233,8 @@
 	animation-name: visible;
 }
 &__preview img {
-	animation-duration: 0.3s;
-	animation-name: visible;
 	}
-@keyframes visible {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-	
-}
+
 &__carousel  {
 	display: grid;
 	margin: 0;
@@ -283,6 +291,7 @@
 	padding: 50px 50px 50px 50px;
 	width: 100%;
 	margin-top: 40px;
+	animation: 2s  isVisible ease-in-out;
 
 		&__title {
          font-size: 2rem;
