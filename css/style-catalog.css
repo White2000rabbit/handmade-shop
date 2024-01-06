@@ -118,7 +118,7 @@ html, body {
 }
 
 .fa-grip-lines:hover {
-  color: rgb(252, 243, 210);
+  color: #000000;
 }
 
 .arrow-top {
@@ -423,9 +423,9 @@ img {
 ._active {
   -webkit-animation: animation 0.9s;
           animation: animation 0.9s;
-  width: 100%;
-  height: 100vh;
-  background-color: #D6E0D5;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  left: 0;
 }
 
 @-webkit-keyframes animation {
@@ -465,9 +465,14 @@ img {
   opacity: 1;
 }
 
+.header__menu.active + .navigation__burger {
+  background-color: #FFF4D6;
+  color: #000000;
+}
+
 .header {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
   background-color: #8FBC8F;
   opacity: 1;
@@ -486,7 +491,6 @@ img {
 
 .navigation__burger {
   z-index: 5;
-  display: block;
   position: relative;
   width: 30px;
   height: 18px;
@@ -496,10 +500,11 @@ img {
 .navigation__list--main {
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  padding: 50px;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,8 +518,10 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 20px;
   background-color: #FFF4D6;
   color: #000000;
+  z-index: 500;
   -webkit-transition: left 1s ease;
   transition: left 1s ease;
 }
@@ -523,9 +530,6 @@ img {
 }
 .navigation__list > li:last-child {
   margin: 0px 0px 0px 0px;
-}
-.navigation__list._active {
-  left: 0;
 }
 .navigation__link {
   font-size: 24px;
