@@ -25,7 +25,6 @@
 }
 .parallax {
 	min-height: 100vh;
-
 	&__body {
 		position: fixed;
 		width: 100%;
@@ -141,7 +140,7 @@
 		}
 	}
 }
-.parallax__content {
+.parallax-content {
 	background-color: $color-1;
 	opacity: 1;
 	position: relative;
@@ -152,38 +151,38 @@
 
 .section {
 	margin: 0 auto;
-	padding: 50px 50px 50px 50px;
-	width: 100%;
-	margin-top: 40px;
-	animation: 2s  isVisible ease-in-out;
+    padding: 50px 50px 50px 50px;
+    width: 100%;
+    margin-top: 40px;
+    animation: 2s isVisible ease-in-out;
 
 		&__title {
          font-size: 2rem;
 			padding: 20px;
+			padding-top:140px;
 			
 		}
-
 		&__description {
 			font-size: 1rem;
 			padding: 0 0 20px 20px;
 		}
 
 		&__gallery {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			column-gap: 30px;
-			row-gap: 0;
-			flex-wrap: wrap;
-			margin: 0 auto;
-			margin-bottom: 20px;
-
+			
 		}
 		&__button {
 			margin: 0px 40% 0px 40%;
 		}
 }
-
+.content__list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 30px;
+	row-gap: 0px;
+	flex-wrap: wrap;
+	margin: 0px auto 20px;
+}
 .card-container {
 	width: 210px;
 	height: 330px;

@@ -92,7 +92,7 @@ const menuIcon = document.querySelector('.menu__icon');
 menuIcon.addEventListener('click', function(e) {
       const headerMenu = document.querySelector('.header__menu');
       document.body.classList.toggle('_lock');
-      menuIcon.classList.toggle('_active');
+      menuIcon.classList.toggle('_close');
       headerMenu.classList.toggle('_active');
    }
    )
