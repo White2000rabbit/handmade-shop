@@ -6,6 +6,16 @@ $color-5: #000000;
 $color-7: #FFF4D6;
 $color-8:   #8FBC8F;
 $color-9: rgb(4, 91, 121, 0.5);
+
+@keyframes arrow-showing {
+	0% {
+	  opacity: 0;
+	}
+ 
+	100% {
+	  opacity: 1;
+	}
+ }
 /*-----------Обнуляющие стили--------------------*/
 * {
 	padding: 0;
@@ -125,7 +135,10 @@ html, body {
 	height: 60px;
 	margin-right: 15px;
 	z-index: 1000;
+	opacity: 0;
+	animation: opacity 0.2s ease-in-out arrow-showing forwards;
 }
+
 .arrow-top > a {
 	display: inline-block;
 	width: 60px;

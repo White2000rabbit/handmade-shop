@@ -88,7 +88,7 @@ for (let filter of filters) {
    });
 }
 //Бургер-меню
-const menuIcon = document.querySelector('.menu__icon');
+const menuIcon = document.querySelector('.navigation__icon');
 menuIcon.addEventListener('click', function(e) {
       const headerMenu = document.querySelector('.header__menu');
       document.body.classList.toggle('_lock');
@@ -96,6 +96,17 @@ menuIcon.addEventListener('click', function(e) {
       headerMenu.classList.toggle('_active');
    }
    )
+//Стрелка наверх 
+const arrow = document.querySelector('.arrow-top');
+window.onscroll = function () {
+   const availableScreenHeight = window.screen.availHeight;
+   if (window.pageYOffset > availableScreenHeight ) {
+   arrow.style.opacity = '1';
+   }
+   if (window.pageYOffset === '0') {
+      arrow.style.opacity = '0';
+   }
+};
 
 //Модальное окно;
 const card = document.querySelectorAll(".card");
