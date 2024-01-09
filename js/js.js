@@ -97,14 +97,14 @@ menuIcon.addEventListener('click', function(e) {
    }
    )
 //Стрелка наверх 
-const arrow = document.querySelector('.arrow-top');
+const arrowTop = document.querySelector('.arrow-top');
 window.onscroll = function () {
    const availableScreenHeight = window.screen.availHeight;
    if (window.pageYOffset > availableScreenHeight ) {
-   arrow.style.opacity = '1';
-   }
-   if (window.pageYOffset === '0') {
-      arrow.style.opacity = '0';
+   arrowTop.style.opacity = '1';
+   } else
+   if (window.pageYOffset <= document.documentElement.clientHeight) {
+      arrowTop.style.opacity = '0';
    }
 };
 
