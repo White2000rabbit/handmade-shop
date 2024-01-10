@@ -60,14 +60,12 @@ if (parallax) {
    observer.observe(document.querySelector('.content'));
 
    function setParallaxItemsStyle(scrollTopProcent) {
-      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 1}%);`;
+      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 0.7}%);`;
       ocean.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 15}%);`;
       palm.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 7}%);`;
    
    }
 }
-
-
 
 //ВЕРХНИЙ ФИЛЬТР
 const filters = document.querySelectorAll('a[data-filter]');
@@ -90,14 +88,25 @@ for (let filter of filters) {
    });
 }
 //Бургер-меню
-const menuIcon = document.querySelector('.menu__icon');
+const menuIcon = document.querySelector('.navigation__icon');
 menuIcon.addEventListener('click', function(e) {
       const headerMenu = document.querySelector('.header__menu');
       document.body.classList.toggle('_lock');
-      menuIcon.classList.toggle('_active');
+      menuIcon.classList.toggle('_close');
       headerMenu.classList.toggle('_active');
    }
    )
+//Стрелка наверх 
+const arrowTop = document.querySelector('.arrow-top');
+window.onscroll = function () {
+   const availableScreenHeight = window.screen.availHeight;
+   if (window.pageYOffset > availableScreenHeight ) {
+   arrowTop.style.opacity = '1';
+   } else
+   if (window.pageYOffset <= document.documentElement.clientHeight) {
+      arrowTop.style.opacity = '0';
+   }
+};
 
 //Модальное окно;
 const card = document.querySelectorAll(".card");
