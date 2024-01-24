@@ -139,8 +139,8 @@ html, body {
 
 .arrow-top {
   position: fixed;
-  top: 55%;
-  left: 92%;
+  top: 70vmin;
+  left: 195vmin;
   width: 60px;
   height: 60px;
   margin-right: 15px;
@@ -194,8 +194,10 @@ img {
   background-color: rgba(12, 43, 61, 0.3);
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
-  overflow-y: hidden;
   pointer-events: none;
+}
+.modal__box {
+  margin: 25px;
 }
 .modal__content {
   display: -webkit-box;
@@ -204,7 +206,7 @@ img {
   gap: 20px;
   margin: 0 auto;
   width: 100%;
-  height: 70%;
+  height: 62%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -216,6 +218,10 @@ img {
           box-shadow: 0px 0px 10px #000000;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+.modal__content__button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .modal__close {
   -ms-flex-item-align: end;
@@ -230,6 +236,7 @@ img {
   transition: all 0.2s ease-in-out;
   margin-bottom: 50px;
   text-align: center;
+  z-index: 1000000;
 }
 .modal__close:hover {
   background-color: #554333;
@@ -358,7 +365,7 @@ img {
 .modal-box {
   position: relative;
   width: 60%;
-  height: 80%;
+  height: 90%;
   background-color: #f4f7f9;
   -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
@@ -439,6 +446,21 @@ img {
   font-weight: 600;
 }
 
+@media (min-width: 790px) and (max-width: 950px) {
+  .arrow-top {
+    left: 276vmin;
+  }
+}
+@media (min-width: 650px) and (max-width: 789px) {
+  .arrow-top {
+    left: 228vmin;
+  }
+}
+@media (max-width: 649px) {
+  .arrow-top {
+    left: 81vmin;
+  }
+}
 ._active {
   -webkit-animation: animation 0.9s;
           animation: animation 0.9s;
@@ -677,14 +699,14 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 130px;
+  top: 30vmin;
   left: 0;
 }
 .parallax__container {
   position: relative;
   z-index: 3;
   padding: 70px;
-  margin-top: 60px;
+  margin-top: -11vmin;
   opacity: 0;
   -webkit-animation: 2s isVisible ease-in-out;
           animation: 2s isVisible ease-in-out;
@@ -717,6 +739,7 @@ img {
   font-size: 32px;
   min-height: 50px;
   line-height: 1.2;
+  margin-bottom: 1em;
 }
 .parallax__button {
   text-align: right;
@@ -803,7 +826,7 @@ img {
   margin: 0 auto;
   padding: 50px 50px 50px 50px;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 3vmin;
   -webkit-animation: 2s isVisible ease-in-out;
           animation: 2s isVisible ease-in-out;
 }

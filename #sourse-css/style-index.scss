@@ -29,7 +29,7 @@
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		top:130px;
+		top:30vmin;
 		left:0;
 	}
 
@@ -37,7 +37,7 @@
 		position:relative;
 		z-index: 3;
 		padding: 70px;
-		margin-top: 60px;
+		margin-top: -11vmin;
 		opacity: 0;
   		animation: 2s  isVisible ease-in-out;
 		animation-fill-mode: forwards;
@@ -63,7 +63,7 @@
 		font-size: 32px;
 		min-height: 50px;
 		line-height: 1.2;
-		
+		margin-bottom: 1em;
 }
 	
 	&__button {
@@ -153,7 +153,7 @@
 	margin: 0 auto;
     padding: 50px 50px 50px 50px;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 3vmin;
     animation: 2s isVisible ease-in-out;
 
 		&__title {
