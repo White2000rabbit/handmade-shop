@@ -112,6 +112,7 @@ window.onscroll = function () {
 //Модальное окно;
 const card = document.querySelectorAll(".card");
 const modal = document.querySelector('.modal');
+   //карточки
 card.forEach(item => {
       item.addEventListener('click', function(e) { 
          e.preventDefault();                              
@@ -122,41 +123,54 @@ card.forEach(item => {
          const modal_button = document.querySelector('.modal__button');
       
          modal.classList.add('modal-open');
-
          modal_carousel.innerHTML = wrap.querySelector('.card__carousel').innerHTML;
          modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
          modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
          const activePhoto = document.querySelector(".modal__preview");
          const carousel_items = document.querySelectorAll(".card__link");
 
-
-         carousel_items.forEach(item => {
+      //карусель 
+      carousel_items.forEach(item => {
             item.addEventListener('click', function(e) { 
                e.preventDefault();
                activePhoto.innerHTML = item.innerHTML;
       })
-         } )
-         
-
-         modal_button.addEventListener('click', function (evt) {
+      })
+      //форма для отправки
+      const modal_form = document.querySelector('.modal__form');
+      modal_button.addEventListener('click', function (evt) {
          evt.preventDefault();
          modal_carousel.remove;
          modal_preview.remove;
          modal_text.remove;
          modal.innerHTML = document.querySelector('.modal__form').innerHTML;
-         modal.querySelector('.modal__form').classListAdd('form--open');
-         const toClose = modal.querySelector('.form__close');
-         toClose.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            modal.classList.remove('modal-open')})
+         modal_form.classList.add('form--open');
+
+      const toClose = modal.querySelector('.form__close');
+      toClose.addEventListener('click', function (evt) {
+         evt.preventDefault();
+         modal.classList.remove('modal-open')});
+
+      const submit = form.querySelector('.submit');
+      console.log(submit);
+      submit.addEventListener('click', function (evt) {
+         evt.preventDefault();
+         modal.innerHTML='Форма отправлена. Свяжемся с вами в ближайшее время:)';
+         modal.style.cssText = 'background-color: #FFF4D6; font-size: 24px;'
+        
+         setTimeout(function() {
+            modal.classList.remove('modal-open');;
+         }, 5000);
+      })
+    
    })
-   })
-      });
+});
+   //Закрыть окно
    const toClose = modal.querySelector('.modal__close');
    toClose.addEventListener('click', function (evt) {
       evt.preventDefault();
       modal.classList.remove('modal-open')})
-
+});
    
 /*
 //галерея в модальном окне 
