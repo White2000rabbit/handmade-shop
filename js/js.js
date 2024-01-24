@@ -87,7 +87,7 @@ for (let filter of filters) {
       })
    });
 }
-//Бургер-меню
+/*Бургер-меню
 const menuIcon = document.querySelector('.navigation__icon');
 menuIcon.addEventListener('click', function(e) {
       const headerMenu = document.querySelector('.header__menu');
@@ -96,6 +96,7 @@ menuIcon.addEventListener('click', function(e) {
       headerMenu.classList.toggle('_active');
    }
    )
+*/
 //Стрелка наверх 
 const arrowTop = document.querySelector('.arrow-top');
 window.onscroll = function () {
@@ -118,28 +119,45 @@ card.forEach(item => {
          const modal_text = document.querySelector('.modal__text');
          const modal_carousel = document.querySelector('.modal__carousel');
          const modal_preview = document.querySelector('.modal__preview');
+         const modal_button = document.querySelector('.modal__button');
+      
+         modal.classList.add('modal-open');
 
-      modal.classList.add('modal-open');
-      modal_carousel.innerHTML = wrap.querySelector('.card__carousel').innerHTML;
-      modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
-      modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
+         modal_carousel.innerHTML = wrap.querySelector('.card__carousel').innerHTML;
+         modal_preview.innerHTML = wrap.querySelector('.card__preview').innerHTML;
+         modal_text.innerHTML = wrap.querySelector('.card__desc').innerHTML;
+         const activePhoto = document.querySelector(".modal__preview");
+         const carousel_items = document.querySelectorAll(".card__link");
 
-      const activePhoto = document.querySelector(".modal__preview");
-      const carousel_items = document.querySelectorAll(".card__link");
 
-      carousel_items.forEach(item => {
-         item.addEventListener('click', function(e) { 
-            e.preventDefault();
-            activePhoto.innerHTML = item.innerHTML;
-   })
-   }   )
+         carousel_items.forEach(item => {
+            item.addEventListener('click', function(e) { 
+               e.preventDefault();
+               activePhoto.innerHTML = item.innerHTML;
       })
-   });
+         } )
          
-const toClose = modal.querySelector('.modal__close');
-toClose.addEventListener('click', function (evt) {
-   evt.preventDefault();
-   modal.classList.remove('modal-open')})
+
+         modal_button.addEventListener('click', function (evt) {
+         evt.preventDefault();
+         modal_carousel.remove;
+         modal_preview.remove;
+         modal_text.remove;
+         modal.innerHTML = document.querySelector('.modal__form').innerHTML;
+         modal.querySelector('.modal__form').classListAdd('form--open');
+         const toClose = modal.querySelector('.form__close');
+         toClose.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            modal.classList.remove('modal-open')})
+   })
+   })
+      });
+   const toClose = modal.querySelector('.modal__close');
+   toClose.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modal.classList.remove('modal-open')})
+
+   
 /*
 //галерея в модальном окне 
 let activePhoto = document.querySelector(".card__preview");
