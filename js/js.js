@@ -145,7 +145,8 @@ card.forEach(item => {
 const modal_button = document.querySelector('.modal__button');
 const form = document.querySelector('.form');
 
-modal_button.addEventListener('click', function (evt) {
+if (modal_button) {
+   modal_button.addEventListener('click', function (evt) {
    evt.preventDefault();
    form.classList.add('form--open');
    
@@ -164,7 +165,8 @@ modal_button.addEventListener('click', function (evt) {
       form.classList.remove('form--open');;
    }, 3000);
    })
-})
+   })
+}
 const menuIcon = document.querySelector('.navigation__burger');
 const headerMenu = document.querySelector('.navigation__list--main');
    menuIcon.addEventListener('click', function(e) {
