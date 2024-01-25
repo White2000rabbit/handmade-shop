@@ -179,6 +179,7 @@ img {
 	transition: all 0.7s ease-in-out;
  
 	pointer-events: none;
+
 	&__box {
 		margin: 25px;
 	}
@@ -187,7 +188,7 @@ img {
 	gap: 20px;
 	margin: 0 auto;
 	width: 100%;
-	height: 62%;
+	height: 55vh;
 	justify-content: space-around;
 
 	& a {
@@ -213,7 +214,6 @@ img {
 	transition: all 0.2s ease-in-out;
 	margin-bottom: 50px;
 	text-align: center;
-	z-index: 1000000;
 }
 &__close:hover {
 	background-color:$color-2;

@@ -492,23 +492,21 @@
             <div class="modal__button button"> 
                <p>Проверить наличие</p>
             </div>
-            <div class="modal__form ">
-               <div class="form__container">
-                  <a class="form__close" href='#'>&times;</a>
-                  <form action="" class='form form--open' id="form" >
-                     <input class='form__input' required type='text' name='Имя' placeholder='Ваше имя' tabindex="1">
-                     <input class='form__input' required type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18">
-                     <input class='form__input' type='email' name='Эл.почта' placeholder='Адрес эл. почты' tabindex="3">
-                     <input class='form__input'  required type="date" name='Дата записи' placeholder='Дата записи' tabindex="4">
-                     <div class="form__checkbox">
-                           <input type="checkbox" id="formAgreement" class="checkbox__input" checked>
-                           <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на щработку персональных данных</span></label>
-                     </div>
-                     <input class='button button--small form__button submit' type="submit" name='Отправить'></input>
-                  </form>
-               </div>
-            </div>
          </div>
+      </div>
+      <div class="form">
+            <a class="form__close" href='#'>&times;</a>
+            <form action="" class='form__container' id="form" >
+               <input class='form__input' required type='text' name='Имя' placeholder='Ваше имя' tabindex="1">
+               <input class='form__input' required type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18">
+               <input class='form__input' type='email' name='Эл.почта' placeholder='Адрес эл. почты' tabindex="3">
+               <input class='form__input'  required type="date" name='Дата записи' placeholder='Дата записи' tabindex="4">
+               <div class="form__checkbox">
+                     <input type="checkbox" id="formAgreement" class="checkbox__input" checked>
+                     <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на щработку персональных данных</span></label>
+               </div>
+               <input class='button button--small form__button' type="submit" name='Отправить'></input>
+            </form>
       </div>
       <footer class="footer">
          <div class="footer__row">
@@ -517,8 +515,6 @@
                   <ul class="footer-nav__list">
                      <li class="footer-nav__item"><a class="footer-nav__link link" href="#">О нас</a></li>
                      <li class="footer-nav__item"><a class="footer-nav__link link" href="#">Каталог</a></li>
-                     <li class="footer-nav__item"><a class="footer-nav__link link" href="#">Покупателям</a></li>
-                     <li class="footer-nav__item"><a class="footer-nav__link link" href="#">Заказать</a></li>
                   </ul> 
                </nav>
             </div>
