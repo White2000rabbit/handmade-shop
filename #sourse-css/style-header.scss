@@ -1,19 +1,8 @@
-._active {
-   transform: translateY(0%);
-   animation: top 1s forwards;
-   } 
-   @keyframes top {
-      from {
-         transform: translateY(-100%);
-      }
-      to {
-         transform: translateY(0px);
-      }
-   }
+
 
 .header {
 	position: fixed;
-	z-index:100;
+	z-index:10000;
 	width:100%;
 	background-color: $color-8;
 	opacity: 1;
@@ -27,7 +16,7 @@
 .navigation {
 	
 	&__burger {
-		z-index: 11;
+		z-index: 501;
       position: relative;
       width:30px;
       height: 18px;
@@ -35,23 +24,22 @@
 		margin: 25px 45px 25px 0;
 	}
 	&__list--main {
-		position: absolute;
+		position: fixed;
 		top:0;
-		left: -100%;
-		min-width: 150px;
-		width:200px;
-    	padding: 25%;
-		
+		left:0;
+		width:100vw;
+		height:100vh;
+		transform: translateY(-150%);
 		display: flex;
 		flex-direction: column;
 		align-items:center;
-		justify-content: flex-start;
+		justify-content: center;
 		gap: 20px;
 		background-color: $color-7;
 		color: $color-5;
 		z-index: 500;
-		transition: left 1s ease;
 	}
+
 	&__list > li {
 		margin: 0px 30px 30px 0px;
 	}
@@ -70,4 +58,15 @@
 		}
 	}
 	
-
+._active {
+   transform: translateY(0%);
+   animation: top 1s forwards;
+   } 
+   @keyframes top {
+      from {
+         transform: translateY(-100%);
+      }
+      to {
+         transform: translateY(0%);
+      }
+   }
