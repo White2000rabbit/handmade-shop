@@ -461,65 +461,59 @@ img {
   }
 }
 ._active {
-  -webkit-animation: animation 0.9s;
-          animation: animation 0.9s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  left: 0;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-animation: top 1s forwards;
+          animation: top 1s forwards;
 }
 
-@-webkit-keyframes animation {
+@-webkit-keyframes top {
   from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    opacity: 1;
   }
 }
 
-@keyframes animation {
+@keyframes top {
   from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-    opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    opacity: 1;
   }
 }
-@-webkit-keyframes close__block {}
-@keyframes close__block {}
-._lock {
-  opacity: 1;
-}
-
 .header {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   width: 100%;
-  background-color: #8FBC8F;
-  opacity: 1;
+  height: 100vh;
+  padding: 100px 30px 30px 30px;
+  overflow: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 90px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  background-color: #8FBC8F;
 }
 
 .logo {
@@ -527,7 +521,7 @@ img {
 }
 
 .navigation__burger {
-  z-index: 5;
+  z-index: 11;
   position: relative;
   width: 30px;
   height: 18px;

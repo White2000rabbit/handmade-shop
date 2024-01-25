@@ -161,49 +161,17 @@ modal_button.addEventListener('click', function (evt) {
       form.innerHTML='Форма отправлена. Свяжемся с вами в ближайшее время:)';
 
    setTimeout(function() {
-      forml.classList.remove('form--open');;
+      form.classList.remove('form--open');;
    }, 3000);
    })
 })
-/*
-//галерея в модальном окне 
-let activePhoto = document.querySelector(".card__preview");
-let carousel_items = document.querySelector(".card__img");
-
-if (modal.classList.contains('modal-open')) {
-   carousel_items.addEventListener('click', function (evt) {
-   console.log('yes')
-   evt.preventDefault();})
-   } 
-  /*
-for (let i=0; i<=carousel_items.length; i++) { 
-   console.log('yno')
-  i.addEventListener('click', function (evt) {
-    console.log('yes')
-   evt.preventDefault();
-   img.classList.add('card__preview');
-   activePhoto.classList.remove('card__preview');
-})
+const menuIcon = document.querySelector('.navigation__burger');
+if (menuIcon) {
+   const headerMenu = document.querySelector('.navigation__list--main');
+   menuIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      headerMenu.classList.toggle('_active');
+   }
+   )
 }
-
-/*
- const modal = document.querySelector('#order');
-const modalDescription = modal.querySelector('.modal__descr');
-const overlay = document.querySelector('.overlay');
-
-document.addEventListener('click', event => {
-  const link = event.target.matches('.card .card-container__link');
-
-  if (!link) {
-    return;
-  }
-  const parent = event.target.closest('.card');
-  const title = parent.querySelector('.card__title');
-
-  modalDescription.textContent = title.textContent;
-
-  modal.classList.add('is-visible');
-  overlay.classList.add('is-visible');
-});
-*/
 }
