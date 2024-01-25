@@ -24,12 +24,12 @@
 	padding: 50px 10px;
 }
 .parallax {
-	min-height: 100vh;
+	min-height: 96vh;
 	&__body {
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		top:30vmin;
+		top:23vmin;
 		left:0;
 	}
 
@@ -37,7 +37,7 @@
 		position:absolute;
 		z-index: 3;
 		padding: 70px;
-		top: 20vmin;
+		top: 10vmin;
 		opacity: 0;
   		animation: 2s  isVisible ease-in-out;
 		animation-fill-mode: forwards;
@@ -83,19 +83,17 @@
 		position: absolute;
 		width: 120%;
 		height: 100%;
-		top: -30%;
+		top: -37%;
 		left: -10%;
 		z-index:1;
 	}
 	
 }
 .parallax-img {
-
 	&__item {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top:0;
 		left:0;
 	}
 	&__frame, &__ocean, &__palm {
