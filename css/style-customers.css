@@ -461,8 +461,8 @@ img {
   }
 }
 .header {
-  position: fixed;
-  z-index: 10000;
+  position: fixed
+    z-index: 10000;
   width: 100%;
   background-color: #8FBC8F;
   opacity: 1;
