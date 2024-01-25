@@ -166,12 +166,11 @@ modal_button.addEventListener('click', function (evt) {
    })
 })
 const menuIcon = document.querySelector('.navigation__burger');
-if (menuIcon) {
-   const headerMenu = document.querySelector('.navigation__list--main');
+const headerMenu = document.querySelector('.navigation__list--main');
    menuIcon.addEventListener('click', function(e) {
       e.preventDefault();
       headerMenu.classList.toggle('_active');
    }
    )
-}
+
 }
