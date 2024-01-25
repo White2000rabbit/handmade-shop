@@ -14,6 +14,7 @@ Java-Script, HTML, CSS
 ### Карточка товара
   ![Снимок2](https://github.com/White2000rabbit/handmade-shop/assets/121927745/98585ecf-3bfb-4f8c-b2fd-f61f7fb54f5d)
 ### Форма обратной связи
-  ![Снимок3](https://github.com/White2000rabbit/handmade-shop/assets/121927745/3ba20289-29c5-4661-9992-47416973ebf1)
+  ![Снимо4к](https://github.com/White2000rabbit/handmade-shop/assets/121927745/21d0b73f-d4e0-490f-b939-4fa73e3b3055)
+
 
 
