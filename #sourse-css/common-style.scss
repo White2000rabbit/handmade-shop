@@ -235,6 +235,7 @@ img {
 	margin:0;
 	padding:0;
 }
+
 & img {
 	object-fit: cover;
 	width: 100%;
@@ -368,10 +369,10 @@ img {
 	z-index: 10000000; 
 	background-color: $color-7;
 	transition: all 0.7s ease-in-out;
-	width: 60%;
+	width: 80%;
 	height: max-content;
    top: 5vmin;
-   right: 42vmin;
+   margin: 0 10%;
 	border-radius:20px;
 	display:flex;
 	flex-direction: column;
@@ -394,7 +395,7 @@ img {
 	border: 1px solid $color-4;
 	border-radius:30px;
 	font-size: 42px;
-	padding: 4px;
+	padding: 7px;
 	transition: all 0.2s ease-in-out;
 	text-align: center;
 	z-index: 10000002;

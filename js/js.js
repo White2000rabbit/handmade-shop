@@ -127,12 +127,13 @@ card.forEach(item => {
       })
 });
    //Закрыть окно
-   const toClose = modal.querySelector('.modal__close');
-   toClose.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      modal.classList.remove('modal-open')})
+   if (modal) {
+      const toClose = modal.querySelector('.modal__close');
+      toClose.addEventListener('click', function (evt) {
+         evt.preventDefault();
+         modal.classList.remove('modal-open')})
+      }
 });
-
 const modal_button = document.querySelector('.modal__button');
 const form = document.querySelector('.form');
 
