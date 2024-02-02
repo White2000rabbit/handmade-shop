@@ -9,9 +9,9 @@ if (parallax) {
    const ocean = document.querySelector('.parallax-img__ocean');
    const palm = document.querySelector('.parallax-img__palm');
    //коэффициенты
-   const forFrame = 15;
-   const forOcean = 5;
-   const forPalm = 10;
+   const forFrame = 0;
+   const forOcean = 0;
+   const forPalm = 0;
    //скорость анимации
    const speed = 0.5;
 
