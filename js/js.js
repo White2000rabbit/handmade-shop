@@ -25,7 +25,7 @@ if (parallax) {
       positionX = positionX + (distX * speed);
       positionY = positionY + (distY * speed);
 
-      //передаем стили объекта
+      //стили объекта
       frame.style.cssText = `transform: translate(${positionX / forFrame}%,${positionY / forFrame}%);`;
       ocean.style.cssText = `transform: translate(${positionX / forOcean}%,${positionY / forOcean}%);`;
       palm.style.cssText = `transform: translate(${positionX / forPalm}%,${positionY / forPalm}%);`;
@@ -41,7 +41,7 @@ if (parallax) {
       const coordY = e.pageY - parallaxHeight / 2; 
       //получаем процентные значения
       coordXprocent = coordX / parallaxWidth * 100;
-      coordYprocent = cordY / parallaxHeight * 100;
+      coordYprocent = coordY / parallaxHeight * 100;
    });
 
    //параллакс при скролле
@@ -87,16 +87,7 @@ for (let filter of filters) {
       })
    });
 }
-/*Бургер-меню
-const menuIcon = document.querySelector('.navigation__icon');
-menuIcon.addEventListener('click', function(e) {
-      const headerMenu = document.querySelector('.header__menu');
-      document.body.classList.toggle('_lock');
-      menuIcon.classList.toggle('_close');
-      headerMenu.classList.toggle('_active');
-   }
-   )
-*/
+
 //Стрелка наверх 
 const arrowTop = document.querySelector('.arrow-top');
 window.onscroll = function () {
@@ -172,6 +163,7 @@ const headerMenu = document.querySelector('.navigation__list--main');
    menuIcon.addEventListener('click', function(e) {
       e.preventDefault();
       headerMenu.classList.toggle('_active');
+      menuIcon.classList.toggle('navigation__burger--click')
    }
    )
 

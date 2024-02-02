@@ -12,32 +12,48 @@
    </head>
    <body>
       <main class='wrapper'>
-      <header class="header">
-         <a class="logo fa-solid fa-house" href="index.html"></a>
-         <nav class="navigation header__menu">
-            <div class="navigation__burger">
-               <a href="#" class="fa-solid fa-grip-lines navigation__icon"></a>
-            </div>
-            <ul class="navigation__list--main">
-               <li class="navigation__item"><a class="navigation__link" href="pages/about.html">О нас</a></li>
-               <li class="navigation__item"><a class="navigation__link" href="pages/catalog.html">Каталог</a></li>
-               <li class="navigation__item"><a class="navigation__link" href="pages/customers.html">Покупателям</a></li>
-               <li class="navigation__item"><a class="navigation__link" href="#">Заказать</a></li>
-            </ul> 
-         </nav>         
-      </header>         
-      <div class="modal" id="order">
+<header class="header">
+   <a class="logo fa-solid fa-house" href="index.html"></a>
+   <nav class="navigation header__menu">
+      <div class="navigation__burger ">
+         <a href="#" class="fa-solid fa-grip-lines navigation__icon"></a>
+      </div>
+      <ul class="navigation__list--main">
+         <li class="navigation__item"><a class="navigation__link" href="pages/about.html">О нас</a></li>
+         <li class="navigation__item"><a class="navigation__link" href="pages/catalog.html">Каталог</a></li>
+      </ul> 
+   </nav>         
+</header>
+      <div class="modal" id="order" type="module">
          <div class="modal-box">
             <a class="modal__close" href='#'>&times;</a>
             <div class="modal__content">
                <div class="modal__desc">
                   <a class="modal__preview" href=""></a>
-                  <div class="modal__carousel">     
+                  <div class="modal__carousel">
+                     
                   </div>
                </div>
                <div class="modal__text"></div>
             </div>
+            <div class="modal__button button"> 
+               <p>Проверить наличие</p>
+            </div>
          </div>
+      </div>
+      <div class="form" type="module">
+            <a class="form__close" href='#'>&times;</a>
+            <form action="" class='form__container' id="form" >
+               <input class='form__input' required type='text' name='Имя' placeholder='Ваше имя' tabindex="1">
+               <input class='form__input' required type="tel" name="phone" placeholder="Телефон" minlength="10" maxlength="18">
+               <input class='form__input' type='email' name='Эл.почта' placeholder='Адрес эл. почты' tabindex="3">
+               <input class='form__input'  required type="date" name='Дата записи' placeholder='Дата записи' tabindex="4">
+               <div class="form__checkbox">
+                     <input type="checkbox" id="formAgreement" class="checkbox__input" checked>
+                     <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных</span></label>
+               </div>
+               <input class='button button--small form__button' type="submit" name='Отправить'></input>
+            </form>
       </div>
       <section class="parallax" id="parallax">
          <div class="parallax__body">
@@ -77,13 +93,13 @@
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-1-1.jpeg" alt="Морская лагуна">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-1-1.jpeg" alt="Морская лагуна">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img ' width="20" height="20" src="img/card-1-2.jpeg" alt="Морская лагуна">
+                                    <img loading="lazy" class='card__img ' width="20" height="20" src="img/card-1-2.jpeg" alt="Морская лагуна">
                                  </a>
                                  <a class="card__link" href="">
-                                    <img class='card__img' width="100" height="150" src="img/card-1.jpeg" alt="Морская лагуна">
+                                    <img loading="lazy" class='card__img' width="100" height="150" src="img/card-1.jpeg" alt="Морская лагуна">
                                  </a>
                               </div>
                            </div>
@@ -97,17 +113,17 @@
                         <div class="card-container card painting" data-check="painting">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img ' width="100" height="150" src="img/card-2.jpeg" alt="Шторм">
+                                 <img loading="lazy" class='card__img ' width="100" height="150" src="img/card-2.jpeg" alt="Шторм">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img ' width="20" height="20" src="img/card-2-1.jpeg" alt="Шторм">
+                                    <img loading="lazy" class='card__img ' width="20" height="20" src="img/card-2-1.jpeg" alt="Шторм">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-2-2.jpeg" alt="Шторм">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-2-2.jpeg" alt="Шторм">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-2.jpeg" alt="Шторм">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-2.jpeg" alt="Шторм">
                                  </a>
                               </div>
                            </div>
@@ -121,17 +137,17 @@
                         <div class="card-container card painting" data-check="painting">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-3.jpeg" alt="Райское наслаждение">
+                                 <img loading="lazy" loading="lazy" class='card__img' width="100" height="150" src="img/card-3.jpeg" alt="Райское наслаждение">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-3-1.jpeg" alt="Райское наслаждение">
+                                    <img loading="lazy" loading="lazy" class='card__img' width="20" height="20" src="img/card-3-1.jpeg" alt="Райское наслаждение">
                                  </a>
                                  <a href=''class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-3-2.jpeg" alt="Райское наслаждение">
+                                    <img loading="lazy" loading="lazy" class='card__img' width="20" height="20" src="img/card-3-2.jpeg" alt="Райское наслаждение">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img ' width="20" height="20" src="img/card-3.jpeg" alt="Райское наслаждение">
+                                    <img loading="lazy" loading="lazy" class='card__img ' width="20" height="20" src="img/card-3.jpeg" alt="Райское наслаждение">
                                  </a>
                               </div>
                            </div>
@@ -145,17 +161,17 @@
                         <div class="card-container card painting" data-check="painting">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-4.jpeg" alt="Лес">
+                                 <img loading="lazy" loading="lazy" class='card__img' width="100" height="150" src="img/card-4.jpeg" alt="Лес">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-4-1.jpeg" alt="Лес">
+                                    <img loading="lazy" loading="lazy" class='card__img' width="20" height="20" src="img/card-4-1.jpeg" alt="Лес">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-4-2.jpeg" alt="Лес">
+                                    <img loading="lazy" loading="lazy" class='card__img' width="20" height="20" src="img/card-4-2.jpeg" alt="Лес">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-4.jpeg" alt="Лес">
+                                    <img loading="lazy" loading="lazy" class='card__img' width="20" height="20" src="img/card-4.jpeg" alt="Лес">
                                  </a>
                               </div>
                            </div>
@@ -180,17 +196,17 @@
                         <div class="card-container card" data-check="christmas">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-7.jpeg" alt="Пряничный домик">
+                                 <img loading="lazy" class='card__img' width="100" height="150" src="img/card-7.jpeg" alt="Пряничный домик">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-7-1.jpeg" alt="Пряничный домик">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-7-1.jpeg" alt="Пряничный домик">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-7-2.jpeg" alt="Пряничный домик">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-7-2.jpeg" alt="Пряничный домик">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-7.jpeg" alt="Пряничный домик">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-7.jpeg" alt="Пряничный домик">
                                  </a>
                               </div>
                            </div>
@@ -204,17 +220,17 @@
                         <div class="card-container card" data-check="christmas">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-9.jpeg" alt="Набор, 6 шт.">
+                                 <img loading="lazy" class='card__img' width="100" height="150" src="img/card-9.jpeg" alt="Набор, 6 шт.">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-9-1.jpeg" alt="Набор, 6 шт.">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-9-1.jpeg" alt="Набор, 6 шт.">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-9-2.jpeg" alt="Набор, 6 шт.">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-9-2.jpeg" alt="Набор, 6 шт.">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-9.jpeg" alt="Набор, 6 шт.">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-9.jpeg" alt="Набор, 6 шт.">
                                  </a>
                               </div>
                            </div>
@@ -228,17 +244,17 @@
                         <div class="card-container card" data-check="christmas">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-10.jpeg" alt="Часы">
+                                 <img loading="lazy" class='card__img' width="100" height="150" src="img/card-10.jpeg" alt="Часы">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__im' width="20" height="20" src="img/card-10-1.jpeg" alt="Часы">
+                                    <img loading="lazy" class='card__im' width="20" height="20" src="img/card-10-1.jpeg" alt="Часы">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-10-2.jpeg" alt="Часы">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-10-2.jpeg" alt="Часы">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-10.jpeg" alt="Часы">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-10.jpeg" alt="Часы">
                                  </a>
                               </div>
                            </div>
@@ -252,17 +268,17 @@
                         <div class="card-container card painting" data-check="home">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-11.jpeg" alt="Подставка. Ракушка">
+                                 <img loading="lazy" class='card__img' width="100" height="150" src="img/card-11.jpeg" alt="Подставка. Ракушка">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-11-1.jpeg" alt="Подставка. Ракушка">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-11-1.jpeg" alt="Подставка. Ракушка">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-11.jpeg" alt="Подставка. Ракушка">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-11.jpeg" alt="Подставка. Ракушка">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-11-2.jpeg" alt="Подставка. Ракушка">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-11-2.jpeg" alt="Подставка. Ракушка">
                                  </a>
                               </div>
                            </div>
@@ -276,14 +292,14 @@
                         <div class="card-container card" data-check="home">
                            <div class="card__content"> 
                               <a class="card__preview" href="">
-                                 <img class='card__img' width="100" height="150" src="img/card-12.jpeg" alt="Подставка. Квадрат">
+                                 <img loading="lazy" class='card__img' width="100" height="150" src="img/card-12.jpeg" alt="Подставка. Квадрат">
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-12-1.jpeg" alt="Подставка. Квадрат">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-12-1.jpeg" alt="Подставка. Квадрат">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-12-2.jpeg" alt="Подставка. Квадрат">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-12-2.jpeg" alt="Подставка. Квадрат">
                                  </a>
                                  <a href='' class='card__link'>
                                     <img class='card__img' width="20" height="20" src="img/card-12.jpeg" alt="Подставка. Квадрат">
@@ -315,13 +331,13 @@
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-15-1.jpeg" alt="Гранат. Брошь">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-15-1.jpeg" alt="Гранат. Брошь">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-15-2.jpeg" alt="Гранат. Брошь">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-15-2.jpeg" alt="Гранат. Брошь">
                                  </a>
                                  <a class='card__link' href="">
-                                    <img class='card__img' width="100" height="150" src="img/card-15.jpeg" alt="Гранат. Брошь">
+                                    <img loading="lazy" class='card__img' width="100" height="150" src="img/card-15.jpeg" alt="Гранат. Брошь">
                                  </a>
                               </div>
                            </div>
@@ -339,13 +355,13 @@
                               </a>
                               <div class="card__carousel">
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-16-1.jpeg" alt="Кусочек моря, кулон">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-16-1.jpeg" alt="Кусочек моря, кулон">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-16-2.jpeg" alt="Кусочек моря, кулон">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-16-2.jpeg" alt="Кусочек моря, кулон">
                                  </a>
                                  <a class='card__link'href="">
-                                    <img class='card__img' width="100" height="150" src="img/card-16.jpeg" alt="Кусочек моря, кулон">
+                                    <img loading="lazy" class='card__img' width="100" height="150" src="img/card-16.jpeg" alt="Кусочек моря, кулон">
                                  </a>
                               </div>
                            </div>
@@ -363,13 +379,13 @@
                               </a>
                               <div class="card__carousel">
                                  <a href=''class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-17-1.jpeg" alt="Кусочек острова, кулон">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-17-1.jpeg" alt="Кусочек острова, кулон">
                                  </a>
                                  <a href='' class='card__link'>
-                                    <img class='card__img' width="20" height="20" src="img/card-17-2.jpeg" alt="Кусочек острова, кулон">
+                                    <img loading="lazy" class='card__img' width="20" height="20" src="img/card-17-2.jpeg" alt="Кусочек острова, кулон">
                                  </a>
                                  <a class='card__link' href="">
-                                    <img class='card__img' width="100" height="150" src="img/card-17.jpeg" alt="Кусочек острова, кулон">
+                                    <img loading="lazy" class='card__img' width="100" height="150" src="img/card-17.jpeg" alt="Кусочек острова, кулон">
                                  </a>
                               </div>
                            </div>
@@ -389,7 +405,7 @@
          </div> 
       </section>
    </section>
-   <footer class="footer">
+<footer class="footer">
    <div class="footer__row">
       <div class="footer__column">
          <nav class="footer__nav footer-nav">
@@ -416,10 +432,8 @@
       <section class="footer__legal">
          <p class="legal__info"><a class="legal-info__link footer-link" href="">Политика обработки персональных данных</a></p>
          <p class="legal__info"><a class="legal-info__link footer-link" href="">Правила пользования сайтом</a></p>
-         <p><a href="https://ru.freepik.com/free-photo/empty-sea-and-beach-background_3502704.htm#query=%D0%BF%D0%BB%D1%8F%D0%B6&position=1&from_view=search&track=sph&uuid=7abe2838-490f-4be3-961c-641d8379c445">Изображение от lifeforstock</a> на Freepik</p>
-         <p><a href="https://ru.freepik.com/free-photo/coconut-tree-isolated-on-white-background_13181235.htm#query=%D0%BFa%D0%BB%D1%8C%D0%BC%D0%B0&position=3&from_view=search&track=ais&uuid=059b929c-a8d9-496d-8203-98f10c55bd82">Изображение от tawatchai07</a> на Freepik</p>
-         <p>Image by <a href="https://www.freepik.com/free-photo/white-blank-frame-with-green-tree-leaves-sides_2532903.htm#query=%D0%BF%D0%B0%D0%BB%D1%8C%D0%BC%D1%8B%20%D0%B1%D0%B5%D0%B7%20%D1%84%D0%BE%D0%BD%D0%B0&position=5&from_view=search&track=ais&uuid=3ac4682f-8672-41bb-b89a-eb3764490993">Freepik</a></p>
       </section>
+   </div>
 </footer>      
 
       </main>
