@@ -9,9 +9,9 @@ if (parallax) {
    const ocean = document.querySelector('.parallax-img__ocean');
    const palm = document.querySelector('.parallax-img__palm');
    //коэффициенты
-   const forFrame = 10;
-   const forOcean = 30;
-   const forPalm = 20;
+   const forFrame = 30;
+   const forOcean = 70;
+   const forPalm = 40;
    //скорость анимации
    const speed = 0.5;
 
@@ -60,7 +60,7 @@ if (parallax) {
    observer.observe(document.querySelector('.content'));
 
    function setParallaxItemsStyle(scrollTopProcent) {
-      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 0.7}%);`;
+      content.style.cssText = `transform: translate(0%, -${scrollTopProcent / 7}%);`;
       ocean.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 15}%);`;
       palm.parentElement.style.cssText = `transform: translate(0%, -${scrollTopProcent / 7}%);`;
    
