@@ -3,17 +3,7 @@
 @import "style-footer.scss";
 
 
-@keyframes isVisible {
-	0% {
-	  opacity: 0;
-	}
-	50% {
-		opacity: 0.5;
-	}
-	100% {
-	  opacity: 1;
-	}
-	 }
+
 
 .card-hidden {
    display: none !important;
@@ -84,7 +74,7 @@
 
 	&__img {
 		position: absolute;
-		width: 120%;
+		width: 130%;
 		height: 100%;
 		top: -37%;
 		left: -10%;
@@ -106,7 +96,7 @@
 		left:0;
 	}
 	&__frame {
-		top: 15%;
+		top: 17%;
 		left:-20%;
 		z-index: 4;
 	}
@@ -119,7 +109,6 @@
 		top: 15%;
 		z-index: 2;
 		height: 100vh;
-		
 	}
 	&__ocean img{
 		height: 100%;

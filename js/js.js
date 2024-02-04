@@ -9,9 +9,9 @@ if (parallax) {
    const ocean = document.querySelector('.parallax-img__ocean');
    const palm = document.querySelector('.parallax-img__palm');
    //коэффициенты
-   const forFrame = 0;
-   const forOcean = 0;
-   const forPalm = 0;
+   const forFrame = 15;
+   const forOcean = 12;
+   const forPalm = 10;
    //скорость анимации
    const speed = 0.5;
 
@@ -71,13 +71,14 @@ if (parallax) {
 const filters = document.querySelectorAll('a[data-filter]');
 for (let filter of filters) {
    filter.addEventListener('click', function(e) {
-      console.log('click')
       e.preventDefault();
-      const catId = filter.getAttribute('data-filter');
+      const catId = filter.getAttribute('data-filter') ;
       const allCards = document.querySelectorAll('.card');
-   
       allCards.forEach(function (card) {
-         if (card.getAttribute('data-check') == catId){
+         if (catId === 'all') {
+            card.classList.add('card-show');
+            card.classList.remove('card-hidden')
+         } else if (card.getAttribute('data-check') == catId){
                card.classList.add('card-show');
                card.classList.remove('card-hidden');
             } else {

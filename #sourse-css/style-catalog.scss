@@ -3,10 +3,11 @@
 @import "style-footer.scss";
 
 .card-hidden {
-   display: none !important;
+   display: none;
+	transform: translate(-150%);
 }
 .card-show {
-	display: block !important;
+	display: block;
 }
 
 .page {
@@ -16,53 +17,75 @@
    margin: 0 auto;
    padding: 0px 40px;
 	margin-bottom: 150px;
-   
+
+		&__breadcrumbs {
+			list-style: none;
+			margin-top: 0px;
+			margin-bottom: 23px;
+			padding-left: 100px;
+			padding-top: 120px;
+		}
 		&__nav {
          margin: 0px 40px;
-			position:absolute;
-			top: 150px;
-			left: 10%;
+			font-size: 1em;
 		}
       &__link {
          width: 100%;
       }
 		&__link:hover {
          font-weight: 600;
-         color: $color-3;
+         color: $color-2;
 		}
 }
-.page-nav {
-	&__list {
-		display: flex;
-		gap: 30px;
-		justify-content: center;
-		width: 100%;
-	}
-}
-.catalog-nav {
-	&__list {
-		display: flex;
-		gap: 30px;
-		justify-content: center;
-		width: 100%;
-	}
-}
-.catalog {
-   display: flex;
-   width: 100%;
-   margin: 0 auto;
-   padding: 40px 10px 0;
-	justify-content: space-between;
-}
-.content__list {
-	width: 1280px;
-	min-width:100%;
-	margin: 0 auto;
-	margin-top: 180px;
+			 
+.breadcrumbs li {
+	display: inline;
+	font-size: 1.1em;
+	line-height: 21px;
 	position: relative;
-	display: flex;
-	gap: 20px;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	margin-right: 2rem;
+}
+.breadcrumb-link {
+	color: $color-2;
+	text-decoration: none; 
+	opacity: 1;
+}
+.breadcrumb-link:hover,
+.breadcrumb-link:focus {
+	opacity: 0.6; 
+}
+.breadcrumbs li:last-child {
+	opacity: 0.5;
+}
+.breadcrumbs li + li::before {
+	content: "/\00a0";
+	position: absolute;
+	top:0;
+	left: -20px;
+	font-size: 1.2em;
+ }
+.nav-list {
+		display: flex;
+		gap: 3em;
+		justify-content: center;
+		width: 100%;
+	&__item:not(:last-child) {
+		margin-right: 4em;
+	}
+}
+
+.content {
+	&__list {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__item:not(:last-child) {
+		margin-right: 0px;
+	}
 }
